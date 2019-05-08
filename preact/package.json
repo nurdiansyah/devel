@@ -18,6 +18,8 @@
     "jsdom": "^11.6.2"
   },
   "scripts": {
+    "publish:deploy": "npm publish --access public",
+    "bump:patch": "bump patch",
     "prepublishOnly": "npm run generateJestPreset",
     "publish:npmrepo": "yarn publish --access public",
     "publish:artifactory": "yarn publish --registry http://devel.deboxserver:8081/artifactory/api/npm/npm-local",

@@ -8,6 +8,10 @@
     "rules/**",
     "*.js"
   ],
+  "scripts": {
+    "publish:deploy": "npm publish --access public",
+    "bump:patch": "bump patch"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "babel-eslint": "^10.0.1",

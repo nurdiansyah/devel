@@ -7,6 +7,7 @@
     "*.js"
   ],
   "scripts": {
+    "publish:deploy": "npm publish --access public",
     "bump:patch": "bump patch"
   },
   "dependencies": {

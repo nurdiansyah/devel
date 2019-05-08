@@ -1,5 +1,5 @@
 {
-  "name": "@deboxsoft/babel-preset-devel",
+  "name": "@deboxsoft/babel",
   "version": "3.0.0",
   "description": "devel babel javascript",
   "author": "Nurdiansyah",
@@ -12,6 +12,7 @@
     "index.js"
   ],
   "scripts": {
+    "publish:deploy": "npm publish --access public",
     "bump:patch": "bump patch"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/devel-react",
-  "version": "1.0.6",
+  "version": "3.0.0",
   "author": "Nurdiansyah",
   "license": "UNLICENSED",
   "repository": {
@@ -13,6 +13,7 @@
     "parcel"
   ],
   "scripts": {
+    "publish:deploy": "npm publish --access public",
     "bump:patch": "bump patch"
   },
   "dependencies": {
