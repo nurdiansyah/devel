@@ -1,11 +1,11 @@
 {
   "name": "root",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A mostly reasonable approach to JavaScript.",
   "private": true,
   "scripts": {
     "publish": "pnpm recursive run publish:deploy",
-    "bump:patch": "standard-version --patch",
+    "bump:patch": "standard-version --release-as patch",
     "lint": "eslint './**/?*.js'"
   },
   "repository": {
