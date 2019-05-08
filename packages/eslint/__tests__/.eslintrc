@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "../index.js"
+  ],
+  "rules": {
+    "no-shadow": 0,
+    "id-length": [2, {"min": 2, "properties": "never", "exceptions": ["t"]}]
+  }
+}

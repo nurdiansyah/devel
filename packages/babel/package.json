@@ -1,0 +1,41 @@
+{
+  "name": "@deboxsoft/babel-preset-devel",
+  "version": "2.0.8",
+  "description": "devel babel javascript",
+  "author": "Nurdiansyah",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deboxsoft/devel-js-coding.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/plugin-transform-flow-strip-types": "^7.2.3",
+    "@babel/plugin-transform-member-expression-literals": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/plugin-transform-property-literals": "^7.2.0",
+    "@babel/plugin-transform-property-mutators": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-wildcard": "^5.0.0",
+    "reflective-bind": "^0.2.3"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.2.2",
+    "jest": "^24.5.0"
+  },
+  "scripts": {
+    "publish:artifactory": "npm publish -- --registry http://devel.deboxserver:8081/artifactory/api/npm/npm-local"
+  }
+}
