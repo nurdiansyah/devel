@@ -1,0 +1,26 @@
+{
+  "name": "@deboxsoft/devel-preact",
+  "version": "1.0.0",
+  "author": "Nurdiansyah",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurdiansyah/debox-npm-devel.git"
+  },
+  "dependencies": {
+    "preact-compat-enzyme": "^0.2.5",
+    "preact-test-utils": "^0.1.4"
+  },
+  "peerDependencies": {
+    "preact": "^8.4.2"
+  },
+  "devDependencies": {
+    "jsdom": "^11.6.2"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run generateJestPreset",
+    "publish:npmrepo": "yarn publish --access public",
+    "publish:artifactory": "yarn publish --registry http://devel.deboxserver:8081/artifactory/api/npm/npm-local",
+    "generateJestPreset": "jest/generate-jest-preset.js"
+  }
+}
