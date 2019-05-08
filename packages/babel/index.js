@@ -97,6 +97,7 @@ module.exports = declare((api, options) => {
           useBuiltIns: true
         }
       ],
+      require('@babel/plugin-proposal-optional-chaining'),
       require('@babel/plugin-proposal-export-default-from')
     ].filter(Boolean)
   }
