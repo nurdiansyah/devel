@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/babel-preset-devel",
-  "version": "2.0.8",
+  "version": "3.0.0",
   "description": "devel babel javascript",
   "author": "Nurdiansyah",
   "license": "UNLICENSED",
@@ -11,8 +11,13 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "bump:patch": "bump patch"
+  },
   "dependencies": {
     "@babel/cli": "^7.1.2",
+    "@babel/core": "~7.4.3",
+    "@babel/helper-plugin-utils": "~7.0.0",
     "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.3",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
@@ -26,18 +31,16 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "~7.3.3",
     "@babel/register": "^7.0.0",
-    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-wildcard": "^5.0.0",
+    "babel-plugin-macros": "^2.5.1",
     "reflective-bind": "^0.2.3"
   },
   "peerDependencies": {
-    "@babel/core": "^7.2.2",
-    "jest": "^24.5.0"
-  },
-  "scripts": {
-    "publish:artifactory": "npm publish -- --registry http://devel.deboxserver:8081/artifactory/api/npm/npm-local"
+    "@deboxsoft/devel": "^3.0.0",
+    "jest": "^24.0.0"
   }
 }

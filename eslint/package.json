@@ -1,0 +1,41 @@
+{
+  "name": "@deboxsoft/eslint-config-devel",
+  "version": "3.0.0",
+  "description": "config eslint standard",
+  "author": "Nurdiansyah",
+  "main": "index.js",
+  "files": [
+    "rules/**",
+    "*.js"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "babel-eslint": "^10.0.1",
+    "confusing-browser-globals": "^1.0.5",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-import-resolver-babel-module": "^5.0.1",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-unicorn": "^7.1.0"
+  },
+  "devDependencies": {
+    "@deboxsoft/babel-preset-devel": "link:../babel",
+    "tape": "^4.10.1",
+    "typescript": "~3.3.0"
+  },
+  "optionalDependencies": {
+    "@babel/core": "^7.4.4",
+    "eslint": "^5.13.0",
+    "typescript": "~3.3.0"
+  },
+  "peerDependencies": {
+    "@deboxsoft/babel-preset-devel": "~3.0.0",
+    "eslint": "^5.13.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@deboxsoft/devel-typescript",
+  "version": "3.0.0",
+  "description": "devel base typescript",
+  "author": "Nurdiansyah",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "bump:patch": "bump patch"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.5.0"
+  },
+  "peerDependencies": {
+    "@deboxsoft/devel": "^3.0.0",
+    "@deboxsoft/plugin-eslint": "^5.16.0",
+    "typescript": "~3.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "typescript": "~3.3.0"
+  }
+}

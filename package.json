@@ -1,25 +1,15 @@
 {
-  "name": "@deboxsoft/devel-js-coding",
+  "name": "@deboxsoft/devel",
   "version": "2.0.0",
   "description": "A mostly reasonable approach to JavaScript.",
   "private": true,
   "scripts": {
-    "base:tape": "cd base && npx tape",
-    "install:config": "cd packages/eslint-config-airbnb && npm prune && npm install",
-    "install:config:base": "cd packages/eslint-config-airbnb-base && npm prune && npm install",
-    "lint": "markdownlint --config linters/.markdownlint.json README.md */README.md",
-    "pretest": "npm run --silent lint",
-    "test": "npm run --silent test:config && npm run --silent test:config:base",
-    "test:config": "cd packages/eslint-config-airbnb; npm test",
-    "test:config:base": "cd packages/eslint-config-airbnb-base; npm test",
-    "pretravis": "npm run --silent lint",
-    "travis": "npm run --silent travis:config && npm run --silent travis:config:base",
-    "travis:config": "cd packages/eslint-config-airbnb; npm run travis",
-    "travis:config:base": "cd packages/eslint-config-airbnb-base; npm run travis"
+    "bump:patch": "standard-version --patch",
+    "lint": "eslint './**/?*.js'"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/deboxsoft/devel-js-coding.git"
+    "url": "https://github.com/deboxsoft/devel.git"
   },
   "keywords": [
     "style guide",
@@ -34,7 +24,21 @@
   ],
   "homepage": "https://github.com/deboxsoft/javascript-base-style-coding",
   "devDependencies": {
-    "@deboxsoft/eslint-config-devel": "file:packages/eslint",
+    "@babel/core": "^7.4.4",
+    "@deboxsoft/eslint-config-devel": "file:eslint",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-import-resolver-babel-module": "^5.0.1",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-unicorn": "^7.1.0",
     "markdownlint-cli": "^0.13.0",
     "prettier": "^1.16.4",
     "standard-version": "^6.0.1"
