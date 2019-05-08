@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/devel-typescript",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "devel base typescript",
   "author": "Nurdiansyah",
   "files": [
@@ -16,7 +16,7 @@
   },
   "peerDependencies": {
     "@deboxsoft/devel": "^3.0.0",
-    "@deboxsoft/plugin-eslint": "^5.16.0",
+    "@deboxsoft/config-eslint-devel": "^3.0.0",
     "typescript": "~3.3.0"
   },
   "devDependencies": {

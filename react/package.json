@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/devel-react",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "Nurdiansyah",
   "license": "UNLICENSED",
   "repository": {
@@ -26,6 +26,6 @@
     "stylelint-prettier": "^1.0.6"
   },
   "peerDependencies": {
-    "@deboxsoft/devel": "^2.0.0"
+    "@deboxsoft/devel": "^3.0.0"
   }
 }

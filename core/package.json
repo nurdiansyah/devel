@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/devel",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "develop base javascript",
   "author": "Nurdiansyah",
   "files": [
@@ -19,6 +19,6 @@
     "rimraf": "^2.5.4"
   },
   "peerDependencies": {
-    "jest": "^23.0.0 | ^24.0.0"
+    "jest": "^23.0.0 || ^24.0.0"
   }
 }
