@@ -1,0 +1,6 @@
+{
+  "preset": ["@deboxsoft/devel"],
+  "setupFiles": [
+    "<rootDir>/node_modules/@deboxsoft/devel-react/jest/setup.js"
+  ]
+}
