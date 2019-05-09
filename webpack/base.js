@@ -32,8 +32,18 @@ const useTypeScript = fs.existsSync(paths.appTsConfig)
 module.exports = config => {
   const appSrc = config.appSrc || paths.Src
   const env = {
-    'process.env': Object.assign({NODE_ENV: config.mode, PUBLIC_URL: publicUrl}, configNode.get('env'))
+    'process.env': Object.assign(
+      {NODE_ENV: config.mode, PUBLIC_URL: publicUrl},
+      configNode.get('env'),
+      config.env
+    )
   }
+  // Assert this just to be safe.
+  // Development builds of React are slow and not intended for production.
+  if (env['process.env'].NODE_ENV !== '"production"') {
+    throw new Error('Production builds must have NODE_ENV=production.')
+  }
+
   return {
     mode: config.mode,
     // You may want 'eval' instead if you prefer to see the compiled output in DevTools.

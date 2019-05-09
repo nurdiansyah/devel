@@ -2,10 +2,13 @@
 
 /* eslint-disable global-require */
 
-// Source maps are resource heavy and can cause out of memory issue for large source files.
-const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false'
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const safePostCssParser = require('postcss-safe-parser')
+
+// Source maps are resource heavy and can cause out of memory issue for large source files.
+const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false'
 
 // style files regexes
 const cssRegex = /\.css$/
@@ -125,6 +128,21 @@ const rules = [
 ]
 
 const plugins = [
+  new OptimizeCSSAssetsPlugin({
+    cssProcessorOptions: {
+      parser: safePostCssParser,
+      map: shouldUseSourceMap
+        ? {
+            // `inline: false` forces the sourcemap to be output into a
+            // separate file
+            inline: false,
+            // `annotation: true` appends the sourceMappingURL to the end of
+            // the css file, helping the browser find the sourcemap
+            annotation: true
+          }
+        : false
+    }
+  }),
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional

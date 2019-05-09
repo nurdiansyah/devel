@@ -2,17 +2,11 @@
 
 const path = require('path')
 const configBase = require('./base')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin')
+const InlineChunkHtmlPlugin = require('inline-chunks-html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const safePostCssParser = require('postcss-safe-parser')
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 const paths = require('./paths')
-const getClientEnvironment = require('./env')
-const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin')
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -28,13 +22,6 @@ const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false'
 // Omit trailing slash as %PUBLIC_URL%/xyz looks better than %PUBLIC_URL%xyz.
 const publicUrl = publicPath.slice(0, -1)
 // Get environment variables to inject into our app.
-const env = getClientEnvironment(publicUrl)
-
-// Assert this just to be safe.
-// Development builds of React are slow and not intended for production.
-if (env.stringified['process.env'].NODE_ENV !== '"production"') {
-  throw new Error('Production builds must have NODE_ENV=production.')
-}
 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
@@ -105,21 +92,6 @@ const configProduction = {
         // Enable file caching
         cache: true,
         sourceMap: shouldUseSourceMap
-      }),
-      new OptimizeCSSAssetsPlugin({
-        cssProcessorOptions: {
-          parser: safePostCssParser,
-          map: shouldUseSourceMap
-            ? {
-                // `inline: false` forces the sourcemap to be output into a
-                // separate file
-                inline: false,
-                // `annotation: true` appends the sourceMappingURL to the end of
-                // the css file, helping the browser find the sourcemap
-                annotation: true
-              }
-            : false
-        }
       })
     ],
     // Automatically split vendor and commons
@@ -138,19 +110,6 @@ const configProduction = {
     // a network request.
     shouldInlineRuntimeChunk && new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime~.+[.]js/]),
 
-    // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    // In production, it will be an empty string unless you specify "homepage"
-    // in `package.json`, in which case it will be the pathname of that URL.
-    new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
-    // This gives some necessary context to module not found errors, such as
-    // the requesting resource.
-    new ModuleNotFoundPlugin(paths.appPath),
-    // Makes some environment variables available to the JS code, for example:
-    // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
-    // It is absolutely essential that NODE_ENV was set to production here.
-    // Otherwise React will be compiled in the very slow development mode.
-    new webpack.DefinePlugin(env.stringified),
-
     new WorkboxWebpackPlugin.GenerateSW({
       clientsClaim: true,
       exclude: [/\.map$/, /asset-manifest\.json$/],
@@ -167,7 +126,7 @@ const configProduction = {
   ].filter(Boolean),
 
   // config HtmlWebpackPlugin plugin
-  htmlWebpackPlugin: {
+  htmlPlugin: {
     inject: true,
     template: paths.appHtml,
     minify: {
@@ -185,4 +144,4 @@ const configProduction = {
   }
 }
 
-module.exports = configBase(configProduction)
+module.exports = (config = configProduction) => configBase(config)
