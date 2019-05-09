@@ -9,7 +9,8 @@
     "url": "git+https://github.com/deboxsoft/devel-js-coding.git"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "preset"
   ],
   "scripts": {
     "publish:deploy": "npm publish --access public",
