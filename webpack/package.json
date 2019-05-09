@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/deboxsoft/devel#readme",
   "scripts": {
-    "test": "jest"
+    "publish:deploy": "npm publish --access public",
+    "bump:patch": "bump patch"
   },
   "dependencies": {
     "babel-loader": "8.0.5",
