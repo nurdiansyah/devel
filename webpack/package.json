@@ -1,0 +1,37 @@
+{
+  "name": "@deboxsoft/webpack",
+  "version": "3.0.0",
+  "description": "devel webpack support",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deboxsoft/devel.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Nurdiansyah",
+  "bugs": {
+    "url": "https://github.com/deboxsoft/devel/issues"
+  },
+  "homepage": "https://github.com/deboxsoft/devel#readme",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "babel-loader": "8.0.5",
+    "babel-preset-react-app": "9.0.0",
+    "css-loader": "2.1.1",
+    "html-webpack-plugin": "3.2.0",
+    "mdx-loader": "2.2.1",
+    "react-dev-utils": "9.0.1",
+    "resolve": "1.10.1",
+    "style-loader": "0.23.1",
+    "terser-webpack-plugin": "1.2.3",
+    "url-loader": "1.1.2",
+    "webpack": "4.30.0",
+    "webpack-dev-server": "3.3.1",
+    "webpack-manifest-plugin": "2.0.4",
+    "workbox-webpack-plugin": "4.3.1"
+  }
+}
