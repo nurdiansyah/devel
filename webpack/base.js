@@ -9,7 +9,7 @@ const webpack = require('webpack')
 const PnpWebpackPlugin = require('pnp-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
+const InterpolateHtmlPlugin = require('interpolate-html-plugin')
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt')
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter')
@@ -21,8 +21,8 @@ const publicPath = '/'
 // `publicUrl` is just like `publicPath`, but we will provide it to our app
 // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
 // Omit trailing slash as %PUBLIC_PATH%/xyz looks better than %PUBLIC_PATH%xyz.
+const publicUrl = ''
 const outputBase = 'dist'
-const env = configNode.get()
 
 const useTypeScript = fs.existsSync(paths.appTsConfig)
 
@@ -31,6 +31,9 @@ const useTypeScript = fs.existsSync(paths.appTsConfig)
 // The production configuration is different and lives in a separate file.
 module.exports = config => {
   const appSrc = config.appSrc || paths.Src
+  const env = {
+    'process.env': Object.assign({NODE_ENV: config.mode, PUBLIC_URL: publicUrl}, configNode.get('env'))
+  }
   return {
     mode: config.mode,
     // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
@@ -71,13 +74,7 @@ module.exports = config => {
                   require.resolve('@deboxsoft/babel/preset/react'),
                   require.resolve('@deboxsoft/babel/preset')
                 ]
-              },
-              // This is a feature of `babel-loader` for webpack (not Babel itself).
-              // It enables caching results in ./node_modules/.cache/babel-loader/
-              // directory for faster rebuilds.
-              cacheDirectory: true,
-              // Don't waste time on Gzipping the cache
-              cacheCompression: false
+              }
             },
             // Process application JS with Babel.
             // The preset includes JSX, Flow, and some ESnext features.
@@ -90,13 +87,7 @@ module.exports = config => {
                   require.resolve('@deboxsoft/babel/preset/react'),
                   require.resolve('@deboxsoft/babel/preset')
                 ]
-              },
-              // This is a feature of `babel-loader` for webpack (not Babel itself).
-              // It enables caching results in ./node_modules/.cache/babel-loader/
-              // directory for faster rebuilds.
-              cacheDirectory: true,
-              // Don't waste time on Gzipping the cache
-              cacheCompression: false
+              }
             },
             // Process any JS outside of the app with Babel.
             // Unlike the application JS, we only compile the standard ES features.
@@ -109,9 +100,6 @@ module.exports = config => {
                 configFile: false,
                 compact: false,
                 presets: [[require.resolve('@deboxsoft/babel/preset/dependencies'), {helpers: true}]],
-                cacheDirectory: true,
-                // Don't waste time on Gzipping the cache
-                cacheCompression: false,
                 // If an error happens in a package, it's possible to be
                 // because it was compiled. Thus, we don't want the browser
                 // debugger to show the original code. Instead, the code
@@ -131,10 +119,7 @@ module.exports = config => {
                     babelrc: false,
                     configFile: false,
                     compact: false,
-                    presets: [[require.resolve('babel-preset-react-app'), {helpers: true}]],
-                    cacheDirectory: true,
-                    // Don't waste time on Gzipping the cache
-                    cacheCompression: false,
+                    presets: [require.resolve('@deboxsoft/babel/preset')],
                     // If an error happens in a package, it's possible to be
                     // because it was compiled. Thus, we don't want the browser
                     // debugger to show the original code. Instead, the code
@@ -211,7 +196,7 @@ module.exports = config => {
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
-      new HtmlWebpackPlugin(config.htmlwebpackPlugin),
+      new HtmlWebpackPlugin(config.htmlPlugin),
       // Makes some environment variables available in index.html.
       // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
       // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
@@ -222,7 +207,7 @@ module.exports = config => {
       new ModuleNotFoundPlugin(paths.appPath),
       // Makes some environment variables available to the JS code, for example:
       // if (process.env.NODE_ENV === 'development') { ... }. See `./env.js`.
-      new webpack.DefinePlugin(env.stringified),
+      new webpack.DefinePlugin(env),
 
       // add config,plugins
       ...config.plugins,

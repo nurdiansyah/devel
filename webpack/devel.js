@@ -1,7 +1,7 @@
 'use strict'
 
 const configBase = require('./base')
-const path = require('./path')
+const path = require('path')
 const paths = require('./paths')
 const webpack = require('webpack')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
@@ -75,10 +75,9 @@ const configDevel = {
   ].filter(Boolean),
 
   // config HtmlWebpackPlugin plugin
-  htmlWebpackPlugin: {
+  htmlPlugin: {
     inject: true,
     template: paths.appHtml
   }
 }
-
 module.exports = (config = configDevel) => configBase(config)
