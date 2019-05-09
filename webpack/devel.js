@@ -1,7 +1,5 @@
 'use strict'
 
-const configNode = require('config')
-const fs = require('fs')
 const configBase = require('./base')
 const path = require('./path')
 const paths = require('./paths')

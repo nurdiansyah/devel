@@ -1,6 +1,5 @@
 'use strict'
 
-const fs = require('fs')
 const path = require('path')
 const configBase = require('./base')
 const webpack = require('webpack')
@@ -36,9 +35,6 @@ const env = getClientEnvironment(publicUrl)
 if (env.stringified['process.env'].NODE_ENV !== '"production"') {
   throw new Error('Production builds must have NODE_ENV=production.')
 }
-
-// Check if TypeScript is setup
-const useTypeScript = fs.existsSync(paths.appTsConfig)
 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
