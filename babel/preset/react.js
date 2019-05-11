@@ -1,10 +1,6 @@
 'use strict'
+const preset = require('babel-preset-react-app')
 
-/* eslint-disable no-param-reassign */
-/* eslint-disable global-require */
-
-const {declare} = require('@babel/helper-plugin-utils')
-
-module.exports = declare((api, options) => ({
-  presets: [[require('@babel/preset-react'), options]]
-}))
+module.exports = (api, options) => {
+  return preset(api, opts)
+}
