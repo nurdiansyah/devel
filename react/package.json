@@ -15,7 +15,8 @@
     "lib",
     "scripts",
     "template*",
-    "jest*"
+    "jest*",
+    "stylelint"
   ],
   "scripts": {
     "publish:deploy": "npm publish --access public",
