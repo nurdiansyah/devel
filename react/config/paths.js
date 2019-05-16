@@ -153,7 +153,7 @@ if (
     ownPath: resolveOwn('.'),
     ownNodeModules: resolveOwn('node_modules'),
     appTypeDeclarations: resolveOwn('template/src/react-app-env.d.ts'),
-    ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
+    ownTypeDeclarations: resolveOwn('types/react-app.d.ts'),
   };
 }
 // @remove-on-eject-end
