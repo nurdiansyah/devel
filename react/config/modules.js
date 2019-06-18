@@ -83,9 +83,23 @@ function getModules() {
 
   const additionalModulePaths = getAdditionalModulePaths(options);
 
+   // convert tsconfig paths to alias webpack
+   const optionsPaths = options.paths || {};
+   const alias = {};
+   const blacklist = ['*'];
+ 
+   Object.keys(optionsPaths).forEach((item) => {
+     if (!blacklist.find(_item => _item === item)) {
+      const key = item.replace('/*', '');
+      const value = path.resolve(paths.appPath, optionsPaths[item][0].replace(/(^(\.\.\/)|(\/\*))/gi, ''));
+      alias[key] = value;
+     }
+   });
+
   return {
     additionalModulePaths: additionalModulePaths,
     hasTsConfig,
+    alias
   };
 }
 
