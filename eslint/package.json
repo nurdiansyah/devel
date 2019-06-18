@@ -38,8 +38,5 @@
   "optionalDependencies": {
     "@babel/core": "^7.4.4",
     "typescript": "~3.3.0"
-  },
-  "peerDependencies": {
-    "@deboxsoft/babel-preset-devel": "~3.0.0"
   }
 }
