@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/devel-react",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "author": "Nurdiansyah",
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "dependencies": {
     "@deboxsoft/devel": "^3.0.0",
     "@deboxsoft/babel": "^3.0.5",
+    "@deboxsoft/eslint-config-devel": "^3.0.2",
     "@svgr/webpack": "4.1.0",
     "babel-loader": "8.0.5",
     "babel-plugin-named-asset-import": "^0.3.2",
