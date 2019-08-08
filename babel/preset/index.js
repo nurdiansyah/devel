@@ -65,6 +65,12 @@ module.exports = declare((api, options) => {
       require('@babel/plugin-transform-property-mutators'),
       require('@babel/plugin-transform-member-expression-literals'),
       require('@babel/plugin-transform-property-literals'),
+      [
+        require('@babel/plugin-proposal-decorators'),
+        {
+          decoratorsBeforeExport: true
+        }
+      ],
       require('@babel/plugin-proposal-class-properties'),
       [
         require('@babel/plugin-proposal-object-rest-spread'),
