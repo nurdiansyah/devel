@@ -1,7 +1,0 @@
-packages:
-  - ./
-  - babel
-  - react
-  - typescript
-  # - preact
-  - core

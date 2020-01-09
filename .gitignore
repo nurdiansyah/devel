@@ -58,3 +58,4 @@ buck-out/
 /graphql.config.json
 pnpm-debug.log
 pnpm-lock.yaml
+lerna-debug.log

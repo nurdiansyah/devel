@@ -1,6 +1,0 @@
-{
-  "presets": [
-    "@deboxsoft/babel/preset",
-    "@deboxsoft/babel/preset/react"
-  ]
-}

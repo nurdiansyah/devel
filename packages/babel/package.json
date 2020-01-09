@@ -28,21 +28,5 @@
     "babel-plugin-wildcard": "^5.0.0",
     "babel-preset-react-app": "^9.0.2",
     "reflective-bind": "^0.2.3"
-  },
-  "devDependencies": {
-    "typescript": "~3.5.3"
-  },
-  "peerDependencies": {
-    "jest": "^24.0.0"
-  },
-  "standard-version": {
-    "releaseCommitMessageFormat": "chore(release): @deboxsoft/babel:{{currentTag}}",
-    "scripts": {
-      "postbump": "npm publish"
-    },
-    "skip": {
-      "changelog": true,
-      "tag": true
-    }
   }
 }

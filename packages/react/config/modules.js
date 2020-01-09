@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 // @remove-on-eject-begin
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -6,6 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 // @remove-on-eject-end
+
 'use strict';
 
 const fs = require('fs');
@@ -83,18 +85,18 @@ function getModules() {
 
   const additionalModulePaths = getAdditionalModulePaths(options);
 
-   // convert tsconfig paths to alias webpack
-   const optionsPaths = options.paths || {};
-   const alias = {};
-   const blacklist = ['*'];
- 
-   Object.keys(optionsPaths).forEach((item) => {
-     if (!blacklist.find(_item => _item === item)) {
+  // convert tsconfig paths to alias webpack
+  const optionsPaths = options.paths || {};
+  const alias = {};
+  const blacklist = ['*'];
+
+  Object.keys(optionsPaths).forEach(item => {
+    if (!blacklist.find(_item => _item === item)) {
       const key = item.replace('/*', '');
       const value = path.resolve(paths.appPath, optionsPaths[item][0].replace(/(^(\.\.\/)|(\/\*))/gi, ''));
       alias[key] = value;
-     }
-   });
+    }
+  });
 
   return {
     additionalModulePaths: additionalModulePaths,
