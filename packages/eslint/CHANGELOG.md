@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.5](https://github.com/deboxsoft/devel/compare/v4.1.4...v4.1.5) (2020-01-09)
+
+
+### Bug Fixes
+
+* remove eslint-config-prettier ([8839aa5](https://github.com/deboxsoft/devel/commit/8839aa5da8f9cb6b0ec985612f8dc8db0b819e16))
+
+
+
+
+
 ## [4.1.4](https://github.com/deboxsoft/devel/compare/v4.1.3...v4.1.4) (2020-01-09)
 
 **Note:** Version bump only for package @deboxsoft/eslint-config-devel
