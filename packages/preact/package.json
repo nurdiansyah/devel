@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/devel-preact",
-  "version": "1.0.0",
+  "version": "4.1.0",
   "author": "Nurdiansyah",
   "license": "UNLICENSED",
   "repository": {
@@ -24,5 +24,6 @@
     "publish:npmrepo": "yarn publish --access public",
     "publish:artifactory": "yarn publish --registry http://devel.deboxserver:8081/artifactory/api/npm/npm-local",
     "generateJestPreset": "jest/generate-jest-preset.js"
-  }
+  },
+  "gitHead": "b9bf8c4c1f076475776e1b1aab81e45ca5fa7d82"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/eslint-config-devel",
-  "version": "3.0.6",
+  "version": "4.1.0",
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",
@@ -8,10 +8,6 @@
     "rules/**",
     "*.js"
   ],
-  "scripts": {
-    "publish:deploy": "npm publish --access public",
-    "bump:patch": "bump patch"
-  },
   "dependencies": {
     "confusing-browser-globals": "^1.0.5"
   },
@@ -42,5 +38,6 @@
     "eslint-plugin-jest": "^22.21.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1"
-  }
+  },
+  "gitHead": "b9bf8c4c1f076475776e1b1aab81e45ca5fa7d82"
 }
