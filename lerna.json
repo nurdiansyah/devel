@@ -10,7 +10,7 @@
       "allowBranch": "master",
       "conventionalCommits": true,
       "exact": true,
-      "gitRemote": "upstream",
+      "gitRemote": "origin",
       "message": "chore(release): %s"
     }
   },
