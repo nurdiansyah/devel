@@ -17,7 +17,19 @@ module.exports = {
     '@typescript-eslint/class-name-casing': 0,
     '@typescript-eslint/no-unused-vars': 1,
     '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/interface-name-prefix': 0
+    '@typescript-eslint/interface-name-prefix': 0,
+  
+    // eslint-config-prettier
+    '@typescript-eslint/quotes': 0,
+    '@typescript-eslint/brace-style': 'off',
+    '@typescript-eslint/func-call-spacing': 'off',
+    '@typescript-eslint/indent': 'off',
+    '@typescript-eslint/member-delimiter-style': 'off',
+    '@typescript-eslint/no-extra-parens': 'off',
+    '@typescript-eslint/no-extra-semi': 'off',
+    '@typescript-eslint/semi': 'off',
+    '@typescript-eslint/space-before-function-paren': 'off',
+    '@typescript-eslint/type-annotation-spacing': 'off'
   },
   overrides: [
     {
