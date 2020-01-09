@@ -4,7 +4,7 @@
 
 Base Airbnb style:
 
-> **Note**: this guide assumes you are using [Babel](https://babeljs.io), and requires that you use [@deboxsoft/devel](https://npmjs.com/@deboxsoft/devel) or the equivalent.
+> **Note**: this guide assumes you are using [typescript](https://www.typescriptlang.org/), and requires that you use [@deboxsoft/devel](https://npmjs.com/@deboxsoft/devel).
 
 
 Other Style Guides
