@@ -12,10 +12,12 @@ module.exports = {
     // 'import/prefer-default-export': 0,
     // 'import/no-default-export': 2,
     '@typescript-eslint/explicit-member-accessibility': 0,
-    '@typescript-eslint/explicit-function-return-type': [0, {allowExpressions: true}],
+    '@typescript-eslint/explicit-function-return-type': [0, { allowExpressions: true }],
     '@typescript-eslint/no-use-before-define': 0,
     '@typescript-eslint/class-name-casing': 0,
-    '@typescript-eslint/no-unused-vars': 0
+    '@typescript-eslint/no-unused-vars': 1,
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/interface-name-prefix': 0
   },
   overrides: [
     {
@@ -25,4 +27,4 @@ module.exports = {
       }
     }
   ]
-}
+};
