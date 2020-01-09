@@ -4,8 +4,7 @@ module.exports = {
     './rules/es6',
     './rules/strict',
     './rules/typescript',
-    './rules/prettier',
-    'eslint-config-prettier/@typescript-eslint'
+    './rules/prettier'
   ].map(require.resolve),
   rules: {}
 }

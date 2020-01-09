@@ -12,8 +12,7 @@ module.exports = {
     './rules/react-a11y',
     './rules/typescript',
     './rules/prettier',
-    './rules/react-prettier',
-    'eslint-config-prettier/@typescript-eslint'
+    './rules/react-prettier'
   ].map(require.resolve),
   rules: {
     // Too restrictive: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
