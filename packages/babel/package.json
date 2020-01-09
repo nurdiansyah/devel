@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/babel",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "devel babel javascript",
   "author": "Nurdiansyah",
   "repository": {
@@ -23,11 +23,11 @@
     "@babel/plugin-transform-property-literals": "^7.7.4",
     "@babel/plugin-transform-property-mutators": "^7.7.4",
     "@babel/register": "^7.7.4",
-    "@deboxsoft/devel": "4.1.0",
+    "@deboxsoft/devel": "4.1.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-wildcard": "^5.0.0",
     "babel-preset-react-app": "^9.0.2",
     "reflective-bind": "^0.2.3"
   },
-  "gitHead": "b9bf8c4c1f076475776e1b1aab81e45ca5fa7d82"
+  "gitHead": "d582310a4d8516684f3fd2fd7c4734b41c63bdb3"
 }
