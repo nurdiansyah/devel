@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/deboxsoft/devel/compare/v4.2.0...v4.2.1) (2020-01-15)
+
+
+### Bug Fixes
+
+* **core:** jest preset ([a324374](https://github.com/deboxsoft/devel/commit/a324374b33f87e4cb045a5182d1e7d6d72f50917))
+
+
+
+
+
 # [4.2.0](https://github.com/deboxsoft/devel/compare/v4.1.5...v4.2.0) (2020-01-15)
 
 
