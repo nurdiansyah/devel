@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/deboxsoft/devel/compare/v4.1.5...v4.2.0) (2020-01-15)
+
+
+### Bug Fixes
+
+* dependencies ([43d513b](https://github.com/deboxsoft/devel/commit/43d513bf0698d83f14984a41fc83b1b262ceb8d8))
+
+
+### Features
+
+* penambahan tsconfig.json ([d8bd272](https://github.com/deboxsoft/devel/commit/d8bd2727a6d7233426ca11a08086e7a1071b4fd4))
+
+
+
+
+
 ## [4.1.3](https://github.com/deboxsoft/devel/compare/v4.1.2...v4.1.3) (2020-01-09)
 
 
