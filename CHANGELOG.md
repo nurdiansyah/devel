@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2](https://github.com/deboxsoft/devel/compare/v4.2.1...v4.2.2) (2020-01-15)
+
+
+### Bug Fixes
+
+* **babel:** reformat code ([6489a0b](https://github.com/deboxsoft/devel/commit/6489a0bb49dded9237962cbf0eff447c0a0accaa))
+* **babel:** remove dependencies @deboxsoft/devel ([19cb010](https://github.com/deboxsoft/devel/commit/19cb0109c04d8fc9bdfc38d503a76307344581cb))
+* **core:** jest-preset.json ([8b097de](https://github.com/deboxsoft/devel/commit/8b097de39e33bfe7f0369761a7151b99a65371df))
+
+
+
+
+
 ## [4.2.1](https://github.com/deboxsoft/devel/compare/v4.2.0...v4.2.1) (2020-01-15)
 
 
