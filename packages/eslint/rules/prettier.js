@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
   plugins: ['prettier'],
   rules: {
@@ -88,4 +86,4 @@ module.exports = {
     'wrap-regex': 0,
     'yield-star-spacing': 0
   }
-}
+};

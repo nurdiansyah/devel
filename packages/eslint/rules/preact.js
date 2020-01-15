@@ -1,5 +1,5 @@
-const configRuleReact = require('./react')
+const configRuleReact = require('./react');
 
-configRuleReact.rules['react/react-in-jsx-scope'] = 2
+configRuleReact.rules['react/react-in-jsx-scope'] = 2;
 
-module.exports = configRuleReact
+module.exports = configRuleReact;

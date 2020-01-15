@@ -10,4 +10,4 @@ module.exports = {
     './rules/react-prettier'
   ].map(require.resolve),
   rules: {}
-}
+};

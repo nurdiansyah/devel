@@ -8,4 +8,4 @@ module.exports = {
     './rules/jest'
   ].map(require.resolve),
   rules: {}
-}
+};

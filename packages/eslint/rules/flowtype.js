@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
   plugins: ['flowtype'],
   rules: {
@@ -26,4 +24,4 @@ module.exports = {
       onlyFilesWithFlowAnnotation: false
     }
   }
-}
+};

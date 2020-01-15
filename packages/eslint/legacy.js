@@ -35,4 +35,4 @@ module.exports = {
     ],
     'no-var': 0
   }
-}
+};

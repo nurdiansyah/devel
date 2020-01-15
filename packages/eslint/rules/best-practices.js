@@ -5,7 +5,7 @@ module.exports = {
 
     // enforces return statements in callbacks of array's methods
     // https://eslint.org/docs/rules/array-callback-return
-    'array-callback-return': [2, {allowImplicit: true}],
+    'array-callback-return': [2, { allowImplicit: true }],
 
     // treat var statements as if they were block scoped
     'block-scoped-var': 2,
@@ -29,10 +29,10 @@ module.exports = {
     curly: [2, 'multi-line'],
 
     // require default case in switch statements
-    'default-case': [2, {commentPattern: '^no default$'}],
+    'default-case': [2, { commentPattern: '^no default$' }],
 
     // encourages use of dot notation whenever possible
-    'dot-notation': [2, {allowKeywords: true}],
+    'dot-notation': [2, { allowKeywords: true }],
 
     // enforces consistent newlines before or after dots
     // https://eslint.org/docs/rules/dot-location
@@ -40,7 +40,7 @@ module.exports = {
 
     // require the use of === and !==
     // https://eslint.org/docs/rules/eqeqeq
-    eqeqeq: [2, 'always', {null: 'ignore'}],
+    eqeqeq: [2, 'always', { null: 'ignore' }],
 
     // make sure for-in loops have an if statement
     'guard-for-in': 2,
@@ -66,7 +66,7 @@ module.exports = {
 
     // disallow else after a return in an if
     // https://eslint.org/docs/rules/no-else-return
-    'no-else-return': [2, {allowElseIf: false}],
+    'no-else-return': [2, { allowElseIf: false }],
 
     // disallow empty functions, except for standalone funcs/arrows
     // https://eslint.org/docs/rules/no-empty-function
@@ -105,7 +105,7 @@ module.exports = {
 
     // disallow reassignments of native objects or read-only globals
     // https://eslint.org/docs/rules/no-global-assign
-    'no-global-assign': [2, {exceptions: []}],
+    'no-global-assign': [2, { exceptions: [] }],
     // deprecated in favor of no-global-assign
     'no-native-reassign': 0,
 
@@ -135,7 +135,7 @@ module.exports = {
     'no-iterator': 2,
 
     // disallow use of labels for anything other then loops and switches
-    'no-labels': [2, {allowLoop: false, allowSwitch: false}],
+    'no-labels': [2, { allowLoop: false, allowSwitch: false }],
 
     // disallow unnecessary nested blocks
     'no-lone-blocks': 2,
@@ -334,14 +334,14 @@ module.exports = {
     'no-void': 2,
 
     // disallow usage of configurable warning terms in comments: e.g. todo
-    'no-warning-comments': ['off', {terms: ['todo', 'fixme', 'xxx'], location: 'start'}],
+    'no-warning-comments': ['off', { terms: ['todo', 'fixme', 'xxx'], location: 'start' }],
 
     // disallow use of the with statement
     'no-with': 2,
 
     // require using Error objects as Promise rejection reasons
     // https://eslint.org/docs/rules/prefer-promise-reject-errors
-    'prefer-promise-reject-errors': [2, {allowEmptyReject: true}],
+    'prefer-promise-reject-errors': [2, { allowEmptyReject: true }],
 
     // Suggest using named capture group in regular expression
     // https://eslint.org/docs/rules/prefer-named-capture-group
@@ -363,9 +363,9 @@ module.exports = {
 
     // require immediate function invocation to be wrapped in parentheses
     // https://eslint.org/docs/rules/wrap-iife.html
-    'wrap-iife': [2, 'outside', {functionPrototypeMethods: false}],
+    'wrap-iife': [2, 'outside', { functionPrototypeMethods: false }],
 
     // require or disallow Yoda conditions
     yoda: 2
   }
-}
+};

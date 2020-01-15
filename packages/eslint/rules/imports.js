@@ -24,7 +24,7 @@ module.exports = {
 
     // ensure imports point to files/modules that can be resolved
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-    'import/no-unresolved': [2, {commonjs: true, caseSensitive: true}],
+    'import/no-unresolved': [2, { commonjs: true, caseSensitive: true }],
 
     // ensure named imports coupled with named exports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
@@ -111,7 +111,7 @@ module.exports = {
     // ensure absolute imports are above relative imports and that unassigned imports are ignored
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     // TODO: enforce a stricter convention in module import order?
-    'import/order': [2, {groups: [['builtin', 'external', 'internal']]}],
+    'import/order': [2, { groups: [['builtin', 'external', 'internal']] }],
 
     // Require a newline after the last import/require in a group
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
@@ -127,7 +127,7 @@ module.exports = {
 
     // Forbid modules to have too many dependencies
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
-    'import/max-dependencies': ['off', {max: 10}],
+    'import/max-dependencies': ['off', { max: 10 }],
 
     // Forbid import of modules using absolute paths
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
@@ -205,7 +205,7 @@ module.exports = {
 
     // Forbid cyclical dependencies between modules
     // https://github.com/benmosher/eslint-plugin-import/blob/d81f48a2506182738409805f5272eff4d77c9348/docs/rules/no-cycle.md
-    'import/no-cycle': [2, {maxDepth: Infinity}],
+    'import/no-cycle': [2, { maxDepth: Infinity }],
 
     // Ensures that there are no useless path segments
     // https://github.com/benmosher/eslint-plugin-import/blob/ebafcbf59ec9f653b2ac2a0156ca3bcba0a7cf57/docs/rules/no-useless-path-segments.md
@@ -225,4 +225,4 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/c34f14f67f077acd5a61b3da9c0b0de298d20059/docs/rules/no-relative-parent-imports.md
     'import/no-relative-parent-imports': 0
   }
-}
+};

@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
   rules: {
     'react/jsx-child-element-spacing': 0,
@@ -18,4 +16,4 @@ module.exports = {
     'react/jsx-wrap-multilines': 0,
     'react/self-closing-comp': 0
   }
-}
+};

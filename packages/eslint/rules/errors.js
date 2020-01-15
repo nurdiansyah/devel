@@ -6,7 +6,7 @@ module.exports = {
 
     // Enforces that a return statement is present in property getters
     // https://eslint.org/docs/rules/getter-return
-    'getter-return': [2, {allowImplicit: true}],
+    'getter-return': [2, { allowImplicit: true }],
 
     // disallow using an async function as a Promise executor
     // https://eslint.org/docs/rules/no-async-promise-executor
@@ -141,6 +141,6 @@ module.exports = {
 
     // ensure that the results of typeof are compared against a valid string
     // https://eslint.org/docs/rules/valid-typeof
-    'valid-typeof': [2, {requireStringLiterals: true}]
+    'valid-typeof': [2, { requireStringLiterals: true }]
   }
-}
+};

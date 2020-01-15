@@ -40,4 +40,4 @@ module.exports = {
     // disallow use of synchronous methods (off by default)
     'no-sync': 0
   }
-}
+};

@@ -22,7 +22,7 @@ module.exports = {
 
     // Prevent missing displayName in a React component definition
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
-    'react/display-name': ['off', {ignoreTranspilerName: false}],
+    'react/display-name': ['off', { ignoreTranspilerName: false }],
 
     // Forbid certain propTypes (any, array, object)
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/forbid-prop-types.md
@@ -37,11 +37,11 @@ module.exports = {
 
     // Forbid certain props on DOM Nodes
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/forbid-dom-props.md
-    'react/forbid-dom-props': ['off', {forbid: []}],
+    'react/forbid-dom-props': ['off', { forbid: [] }],
 
     // Enforce boolean attributes notation in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
-    'react/jsx-boolean-value': ['error', 'never', {always: []}],
+    'react/jsx-boolean-value': ['error', 'never', { always: [] }],
 
     // Validate closing bracket location in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
@@ -53,7 +53,7 @@ module.exports = {
 
     // Enforce or disallow spaces inside of curly braces in JSX attributes
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
-    'react/jsx-curly-spacing': ['error', 'never', {allowMultiline: true}],
+    'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
 
     // Enforce event handler naming conventions in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
@@ -75,7 +75,7 @@ module.exports = {
 
     // Limit maximum of props on a single line in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-    'react/jsx-max-props-per-line': ['error', {maximum: 1, when: 'multiline'}],
+    'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
 
     // Prevent usage of .bind() in JSX props
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -92,11 +92,11 @@ module.exports = {
 
     // Prevent duplicate props in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
-    'react/jsx-no-duplicate-props': ['error', {ignoreCase: true}],
+    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
 
     // Prevent usage of unwrapped JSX strings
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
-    'react/jsx-no-literals': ['off', {noStrings: true}],
+    'react/jsx-no-literals': ['off', { noStrings: true }],
 
     // Disallow undeclared variables in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
@@ -209,7 +209,7 @@ module.exports = {
 
     // Require stateless functions when not using lifecycle methods, setState or ref
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-    'react/prefer-stateless-function': ['off', {ignorePureComponents: true}],
+    'react/prefer-stateless-function': ['off', { ignorePureComponents: true }],
 
     // Prevent missing props validation in a React component definition
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
@@ -308,11 +308,11 @@ module.exports = {
 
     // Disallow target="_blank" on links
     // https://github.com/yannickcr/eslint-plugin-react/blob/ac102885765be5ff37847a871f239c6703e1c7cc/docs/rules/jsx-no-target-blank.md
-    'react/jsx-no-target-blank': ['error', {enforceDynamicLinks: 'always'}],
+    'react/jsx-no-target-blank': ['error', { enforceDynamicLinks: 'always' }],
 
     // only .jsx files may have JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-    'react/jsx-filename-extension': ['error', {extensions: ['.jsx', 'tsx']}],
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', 'tsx'] }],
 
     // prevent accidental JS comments from being injected into JSX as text
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
@@ -324,7 +324,7 @@ module.exports = {
 
     // require a shouldComponentUpdate method, or PureRenderMixin
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
-    'react/require-optimization': ['off', {allowDecorators: []}],
+    'react/require-optimization': ['off', { allowDecorators: [] }],
 
     // warn against using findDOMNode()
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
@@ -332,11 +332,11 @@ module.exports = {
 
     // Forbid certain props on Components
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
-    'react/forbid-component-props': ['off', {forbid: []}],
+    'react/forbid-component-props': ['off', { forbid: [] }],
 
     // Forbid certain elements
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
-    'react/forbid-elements': ['off', {forbid: []}],
+    'react/forbid-elements': ['off', { forbid: [] }],
 
     // Prevent problem with children and props.dangerouslySetInnerHTML
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
@@ -393,7 +393,7 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
     // this is intentionally set to "warn". it would be "error",
     // but it's only critical if you're stripping propTypes in production.
-    'react/forbid-foreign-prop-types': ['warn', {allowInPropTypes: true}],
+    'react/forbid-foreign-prop-types': ['warn', { allowInPropTypes: true }],
 
     // Prevent void DOM elements from receiving children
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
@@ -428,11 +428,11 @@ module.exports = {
 
     // Enforce curly braces or disallow unnecessary curly braces in JSX props and/or children
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
-    'react/jsx-curly-brace-presence': ['error', {props: 'never', children: 'never'}],
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
 
     // One JSX Element Per Line
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-one-expression-per-line.md
-    'react/jsx-one-expression-per-line': ['error', {allow: 'single-child'}],
+    'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
 
     // Enforce consistent usage of destructuring assignment of props, state, and context
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/destructuring-assignment.md
@@ -496,4 +496,4 @@ module.exports = {
       'Object.freeze' // https://tc39.github.io/ecma262/#sec-object.freeze
     ]
   }
-}
+};

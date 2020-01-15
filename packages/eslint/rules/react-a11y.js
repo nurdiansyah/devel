@@ -10,11 +10,11 @@ module.exports = {
   rules: {
     // Enforce that anchors have content
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md
-    'jsx-a11y/anchor-has-content': [2, {components: []}],
+    'jsx-a11y/anchor-has-content': [2, { components: [] }],
 
     // Require ARIA roles to be valid and non-abstract
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md
-    'jsx-a11y/aria-role': [2, {ignoreNonDom: false}],
+    'jsx-a11y/aria-role': [2, { ignoreNonDom: false }],
 
     // Enforce all aria-* props are valid.
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-props.md
@@ -91,7 +91,7 @@ module.exports = {
 
     // ensure <hX> tags have content and are not aria-hidden
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/heading-has-content.md
-    'jsx-a11y/heading-has-content': [2, {components: ['']}],
+    'jsx-a11y/heading-has-content': [2, { components: [''] }],
 
     // require HTML elements to have a "lang" prop
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/html-has-lang.md
@@ -150,7 +150,7 @@ module.exports = {
 
     // prohibit autoFocus prop
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-autofocus.md
-    'jsx-a11y/no-autofocus': [2, {ignoreNonDOM: true}],
+    'jsx-a11y/no-autofocus': [2, { ignoreNonDOM: true }],
 
     // ensure HTML elements do not specify redundant ARIA roles
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-redundant-roles.md
@@ -210,4 +210,4 @@ module.exports = {
       }
     ]
   }
-}
+};
