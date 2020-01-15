@@ -1,8 +1,5 @@
 {
   "extends": [
-    "@deboxsoft/devel/common"
-  ],
-  "env": {
-    "browser": true
-  }
+    "./packages/eslint"
+  ]
 }
