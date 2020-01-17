@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.4](https://github.com/deboxsoft/devel/compare/v4.2.3...v4.2.4) (2020-01-17)
+
+
+### Bug Fixes
+
+* **core:** rename tsconfig ke tsconfig-base ([dd5cc17](https://github.com/deboxsoft/devel/commit/dd5cc1704a8743c682cddaf46e58aceb9732f180))
+
+
+
+
+
 ## [4.2.3](https://github.com/deboxsoft/devel/compare/v4.2.2...v4.2.3) (2020-01-16)
 
 **Note:** Version bump only for package root
