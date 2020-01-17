@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.1.4 (2020-01-17)
+
+
+### Bug Fixes
+
+* remove files pada package json ([8f27e09](https://github.com/nurdiansyah/debox-npm-devel/commit/8f27e09723a72acd0c954dbec7fc57fbde156f4f))
+
+
+
+## 4.1.3 (2020-01-09)
+
+
+### Bug Fixes
+
+* package json ([e85794e](https://github.com/nurdiansyah/debox-npm-devel/commit/e85794e9a2164d4f5936fae8f6b6cd0ed06ecedb))
+
+
+
+## 4.1.2 (2020-01-09)
+
+
+### Features
+
+* add react module ([265db32](https://github.com/nurdiansyah/debox-npm-devel/commit/265db326104940bf0b12331be68bd1afa5230a39))
+* lerna dan workspace yarn ([9ee9d55](https://github.com/nurdiansyah/debox-npm-devel/commit/9ee9d55a22f9a1436cb7babc05a2ffae8074d604))
+
+
+* chore!: migration version 3 ([b8f78c4](https://github.com/nurdiansyah/debox-npm-devel/commit/b8f78c4e2484361dc766e513ca69bcb9f4787697))
+
+
+### BREAKING CHANGES
+
+* move project package.
+
+
+
+
+
 ## [4.1.3](https://github.com/nurdiansyah/debox-npm-devel/compare/v4.1.2...v4.1.3) (2020-01-09)
 
 
