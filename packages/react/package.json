@@ -9,15 +9,6 @@
   "bin": {
     "debox-react-scripts": "./bin/react-scripts.js"
   },
-  "files": [
-    "bin",
-    "config",
-    "lib",
-    "scripts",
-    "template*",
-    "jest*",
-    "stylelint"
-  ],
   "dependencies": {
     "@svgr/webpack": "4.1.0",
     "babel-loader": "8.0.5",

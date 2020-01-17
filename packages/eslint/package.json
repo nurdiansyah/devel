@@ -4,10 +4,6 @@
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",
-  "files": [
-    "rules/**",
-    "*.js"
-  ],
   "dependencies": {
     "confusing-browser-globals": "^1.0.9"
   },
