@@ -8,6 +8,7 @@ module.exports = {
     // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
     'no-prototype-builtins': 0,
     'no-undef': 0,
+    'no-useless-constructor': 'off',
     // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
     // 'import/prefer-default-export': 0,
     // 'import/no-default-export': 2,
@@ -17,6 +18,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 0,
     '@typescript-eslint/class-name-casing': 0,
     '@typescript-eslint/no-unused-vars': 1,
+    '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/interface-name-prefix': 0,
 
