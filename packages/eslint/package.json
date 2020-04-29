@@ -5,7 +5,8 @@
   "author": "Nurdiansyah",
   "main": "index.js",
   "dependencies": {
-    "confusing-browser-globals": "^1.0.9"
+    "confusing-browser-globals": "^1.0.9",
+    "eslint-config-prettier": "^6.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -14,16 +15,6 @@
     "babel-eslint": "^10.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^6.8.0",
-    "eslint-config-react": "^1.1.7",
-    "eslint-import-resolver-babel-module": "^5.0.1",
-    "eslint-import-resolver-typescript": "^1.1.1",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-jest": "^23.6.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-hooks": "~2.3.0",
     "eslint-plugin-unicorn": "^15.0.1",
     "tape": "^4.10.1"
   },
@@ -31,9 +22,12 @@
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "@typescript-eslint/parser": "^2.16.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.6.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.2"
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0"
   },
   "gitHead": "58b045c5c9c04ad2dd9500d843d4a32ca31c5404"
 }
