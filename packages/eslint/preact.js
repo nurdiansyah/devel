@@ -4,12 +4,7 @@ module.exports = {
       pragma: 'h'
     }
   },
-  extends: [
-    './rules/base',
-    './rules/react',
-    './rules/typescript',
-    './rules/prettier',
-  ].map(require.resolve),
+  extends: ['./rules/base', './rules/react', './rules/typescript', './rules/prettier'].map(require.resolve),
   rules: {
     // Too restrictive: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
     'react/destructuring-assignment': 0,
