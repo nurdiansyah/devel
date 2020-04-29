@@ -1,11 +1,6 @@
 module.exports = {
   extends: [
-    './rules/best-practices',
-    './rules/errors',
-    './rules/node',
-    './rules/style',
-    './rules/variables',
-    './rules/prettier'
+    './rules/base',
   ].map(require.resolve),
   env: {
     browser: true,

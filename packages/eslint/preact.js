@@ -5,14 +5,10 @@ module.exports = {
     }
   },
   extends: [
-    './base',
-    './rules/es6',
-    './rules/strict',
-    './rules/preact',
-    './rules/react-a11y',
+    './rules/base',
+    './rules/react',
     './rules/typescript',
     './rules/prettier',
-    './rules/react-prettier'
   ].map(require.resolve),
   rules: {
     // Too restrictive: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md

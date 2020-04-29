@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./typescript'].map(require.resolve),
+  extends: ['./rules/base', './rules/typescript', './rules/prettier'].map(require.resolve),
   parserOptions: {
     sourceType: 'module'
   },

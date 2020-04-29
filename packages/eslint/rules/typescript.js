@@ -1,45 +1,62 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module' // Allows for the use of imports
-  },
-  extends: ['plugin:@typescript-eslint/recommended'],
-  rules: {
-    // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
-    'no-prototype-builtins': 0,
-    'no-undef': 0,
-    'no-useless-constructor': 'off',
-    // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
-    // 'import/prefer-default-export': 0,
-    // 'import/no-default-export': 2,
-    '@typescript-eslint/ban-ts-ignore': 0,
-    '@typescript-eslint/explicit-member-accessibility': 0,
-    '@typescript-eslint/explicit-function-return-type': [0, { allowExpressions: true }],
-    '@typescript-eslint/no-use-before-define': 0,
-    '@typescript-eslint/class-name-casing': 0,
-    '@typescript-eslint/no-unused-vars': 1,
-    '@typescript-eslint/no-useless-constructor': 'error',
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/interface-name-prefix': 0,
-
-    // eslint-config-prettier
-    '@typescript-eslint/quotes': 0,
-    '@typescript-eslint/brace-style': 'off',
-    '@typescript-eslint/func-call-spacing': 'off',
-    '@typescript-eslint/indent': 'off',
-    '@typescript-eslint/member-delimiter-style': 'off',
-    '@typescript-eslint/no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-semi': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/semi': 'off',
-    '@typescript-eslint/space-before-function-paren': 'off',
-    '@typescript-eslint/type-annotation-spacing': 'off'
-  },
   overrides: [
     {
-      files: ['**/*.{spec,test}.{js,jsx,ts,tsx}'],
+      files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        },
+
+        // typescript-eslint specific options
+        warnOnUnsupportedTypeScriptVersion: true
+      },
+      plugins: ['@typescript-eslint'],
+      // If adding a typescript-eslint version of an existing ESLint rule,
+      // make sure to disable the ESLint rule here.
       rules: {
-        '@typescript-eslint/class-name-casing': 0
+        // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
+        'default-case': 'off',
+        // 'tsc' already handles this (https://github.com/typescript-eslint/typescript-eslint/issues/291)
+        'no-dupe-class-members': 'off',
+        // 'tsc' already handles this (https://github.com/typescript-eslint/typescript-eslint/issues/477)
+        'no-undef': 'off',
+
+        // Add TypeScript specific rules (and turn off ESLint equivalents)
+        '@typescript-eslint/consistent-type-assertions': 'warn',
+        'no-array-constructor': 'off',
+        '@typescript-eslint/no-array-constructor': 'warn',
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': [
+          'warn',
+          {
+            functions: false,
+            classes: false,
+            variables: false,
+            typedefs: false
+          }
+        ],
+        'no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-expressions': [
+          'error',
+          {
+            allowShortCircuit: true,
+            allowTernary: true,
+            allowTaggedTemplates: true
+          }
+        ],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            args: 'none',
+            ignoreRestSiblings: true
+          }
+        ],
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': 'warn'
       }
     }
   ]
