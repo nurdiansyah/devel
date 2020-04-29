@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/eslint-config-devel",
-  "version": "4.3.0",
+  "version": "5.0.0",
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",
