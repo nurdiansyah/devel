@@ -1,7 +1,5 @@
-/* eslint-disable global-require */
+const preset = require('@babel/preset-typescript');
 
-const { declare } = require('@babel/helper-plugin-utils');
-
-module.exports = declare((api, options) => ({
-  presets: [['@babel/preset-typescript', options]]
-}));
+module.exports = (api, options) => {
+  return preset(api, options);
+};
