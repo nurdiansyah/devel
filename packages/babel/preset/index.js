@@ -12,10 +12,11 @@ const validateBoolOption = (name, value, defaultValue) => {
   return value;
 };
 
-module.exports = function(api, opts, env) {
+module.exports = function(api, opts) {
   if (!opts) {
     opts = {};
   }
+  var env = process.env.BABEL_ENV || process.env.NODE_ENV || 'development';
 
   var isEnvDevelopment = env === 'development';
   var isEnvProduction = env === 'production';
