@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/deboxsoft/devel-js-coding/compare/@deboxsoft/babel@4.3.1...@deboxsoft/babel@5.0.0) (2020-05-15)
+
+
+### Bug Fixes
+
+* **babel:** fix env and dependencies ([8fd6dda](https://github.com/deboxsoft/devel-js-coding/commit/8fd6dda1dd31f367e3152ea099398886ee352d16))
+
+
+
+
+
 ## [4.3.1](https://github.com/deboxsoft/devel-js-coding/compare/@deboxsoft/babel@4.3.0...@deboxsoft/babel@4.3.1) (2020-05-14)
 
 **Note:** Version bump only for package @deboxsoft/babel
