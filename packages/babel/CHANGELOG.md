@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/deboxsoft/devel-js-coding/compare/@deboxsoft/babel@5.0.0...@deboxsoft/babel@5.1.0) (2020-05-18)
+
+
+### Features
+
+* **babel:** add babel-preset-const-enum ([67107ab](https://github.com/deboxsoft/devel-js-coding/commit/67107ab79bb1ea693c83bad8d6628cb8db45c4a1))
+
+
+
+
+
 # [5.0.0](https://github.com/deboxsoft/devel-js-coding/compare/@deboxsoft/babel@4.3.1...@deboxsoft/babel@5.0.0) (2020-05-15)
 
 
