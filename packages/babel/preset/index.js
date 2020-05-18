@@ -83,7 +83,11 @@ module.exports = function(api, opts) {
           useBuiltIns: true
         }
       ],
-      isTypeScriptEnabled && [require('@babel/preset-typescript').default]
+      isTypeScriptEnabled && [require('@babel/preset-typescript').default],
+      isTypeScriptEnabled && [
+        // run before @babel/preset-typescript
+        require('babel-preset-const-enum').default
+      ]
     ].filter(Boolean),
     plugins: [
       // Experimental macros support. Will be documented after it's had some time

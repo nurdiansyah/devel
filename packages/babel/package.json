@@ -32,6 +32,7 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "babel-plugin-wildcard": "^5.0.0",
+    "babel-preset-const-enum": "1.0.0",
     "reflective-bind": "^0.2.3"
   },
   "gitHead": "58b045c5c9c04ad2dd9500d843d4a32ca31c5404"
