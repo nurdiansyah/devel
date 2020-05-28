@@ -14,7 +14,7 @@
       "conventionalCommits": true,
       "exact": true,
       "gitRemote": "origin",
-      "message": "chore(release): %s"
+      "message": "chore(release): publish %s"
     }
   },
   "ignoreChanges": [

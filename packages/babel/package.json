@@ -5,7 +5,8 @@
   "author": "Nurdiansyah",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deboxsoft/devel-js-coding.git"
+    "url": "ssh://github.com/deboxsoft/devel.git",
+    "directory": "packages/babel"
   },
   "files": [
     "index.js",
