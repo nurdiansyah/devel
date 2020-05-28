@@ -4,6 +4,11 @@
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://github.com/deboxsoft/devel.git",
+    "directory": "packages/eslint"
+  },
   "dependencies": {
     "confusing-browser-globals": "^1.0.9",
     "eslint-config-prettier": "^6.11.0"
