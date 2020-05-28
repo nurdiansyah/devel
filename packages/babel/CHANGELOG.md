@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/deboxsoft/devel/compare/@deboxsoft/babel@5.1.0...@deboxsoft/babel@5.1.1) (2020-05-28)
+
+
+### Bug Fixes
+
+* **babel:** publish github ([3a8df88](https://github.com/deboxsoft/devel/commit/3a8df881b2b148ad9c368e305317a6168e4a7746))
+
+
+
+
+
 # [5.1.0](https://github.com/deboxsoft/devel-js-coding/compare/@deboxsoft/babel@5.0.0...@deboxsoft/babel@5.1.0) (2020-05-18)
 
 
