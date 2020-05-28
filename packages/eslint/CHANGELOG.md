@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.4](https://github.com/deboxsoft/devel/compare/@deboxsoft/eslint-config-devel@5.0.3...@deboxsoft/eslint-config-devel@5.0.4) (2020-05-28)
+
+
+### Bug Fixes
+
+* **eslint:** add repository package github ([6aa3c56](https://github.com/deboxsoft/devel/commit/6aa3c567f51fb7ffc55a38b615fd21701ccef52d))
+
+
+
+
+
 ## [5.0.3](https://github.com/deboxsoft/devel/compare/@deboxsoft/eslint-config-devel@5.0.2...@deboxsoft/eslint-config-devel@5.0.3) (2020-04-29)
 
 **Note:** Version bump only for package @deboxsoft/eslint-config-devel
