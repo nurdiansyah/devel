@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.2](https://github.com/deboxsoft/devel/compare/@deboxsoft/babel@5.1.1...@deboxsoft/babel@5.1.2) (2020-06-11)
+
+
+### Bug Fixes
+
+* **babel:** object rest spread ([80f2381](https://github.com/deboxsoft/devel/commit/80f23815fb8dd49157dce6cb0a44d2423e929da2))
+
+
+
+
+
 ## [5.1.1](https://github.com/deboxsoft/devel/compare/@deboxsoft/babel@5.1.0...@deboxsoft/babel@5.1.1) (2020-05-28)
 
 
