@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.7](https://github.com/deboxsoft/devel/compare/@deboxsoft/devel@4.2.6...@deboxsoft/devel@4.2.7) (2020-06-11)
+
+
+### Bug Fixes
+
+* **devel:** update peerdependencies ([87df586](https://github.com/deboxsoft/devel/commit/87df58694870a06c39f035eb0799cc194b0b1502))
+
+
+
+
+
 ## [4.2.6](https://github.com/deboxsoft/devel/compare/@deboxsoft/devel@4.2.5...@deboxsoft/devel@4.2.6) (2020-06-11)
 
 **Note:** Version bump only for package @deboxsoft/devel
