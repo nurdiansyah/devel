@@ -135,6 +135,7 @@ module.exports = function(api, opts) {
       [
         require('@babel/plugin-proposal-object-rest-spread').default,
         {
+          loose: true,
           useBuiltIns: true
         }
       ],
