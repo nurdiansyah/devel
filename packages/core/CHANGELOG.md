@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.10](https://github.com/deboxsoft/devel/compare/@deboxsoft/devel@4.2.9...@deboxsoft/devel@4.2.10) (2020-06-20)
+
+
+### Bug Fixes
+
+* **core:** tsconfig back to commonJS module ([d9450c9](https://github.com/deboxsoft/devel/commit/d9450c9bc1305d151053a166d6afa95d824d5108))
+
+
+
+
+
 ## [4.2.9](https://github.com/deboxsoft/devel/compare/@deboxsoft/devel@4.2.8...@deboxsoft/devel@4.2.9) (2020-06-13)
 
 **Note:** Version bump only for package @deboxsoft/devel
