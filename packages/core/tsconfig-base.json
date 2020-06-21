@@ -5,6 +5,7 @@
     "lib": ["ES2019"],
     "declaration": true,
     "moduleResolution": "node",
+    "composite": true,
     "strict": false,
     "strictNullChecks": true,
     "strictPropertyInitialization": false,
@@ -14,6 +15,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "sourceMap": true,
     "importHelpers": true,
     "resolveJsonModule": true
   }
