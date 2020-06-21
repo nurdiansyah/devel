@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.11](https://github.com/deboxsoft/devel/compare/@deboxsoft/devel@4.2.10...@deboxsoft/devel@4.2.11) (2020-06-21)
+
+
+### Bug Fixes
+
+* **core:** enable composite n sourceMap ([6d45b0d](https://github.com/deboxsoft/devel/commit/6d45b0d3d8c25550c32af24edb778c230d95691a))
+
+
+
+
+
 ## [4.2.10](https://github.com/deboxsoft/devel/compare/@deboxsoft/devel@4.2.9...@deboxsoft/devel@4.2.10) (2020-06-20)
 
 
