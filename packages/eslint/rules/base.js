@@ -2,7 +2,9 @@ const restrictedGlobals = require('confusing-browser-globals');
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 2015
+  },
   env: {
     node: true
   },
