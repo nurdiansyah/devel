@@ -1,5 +1,6 @@
 {
   "extends": [
-    "./packages/eslint"
+    "./packages/eslint",
+    "./packages/eslint/svelte"
   ]
 }

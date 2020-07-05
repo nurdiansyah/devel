@@ -1,8 +1,6 @@
 {
   "bracketSpacing": true,
   "semi": true,
-  "singleQuote": true,
-  "printWidth": 110,
   "overrides": [
     {
       "files": [".js", ".jsx"],

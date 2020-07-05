@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./rules/base'].map(require.resolve),
+  extends: ["./rules/base"].map(require.resolve),
   env: {
     browser: true,
     node: true,
@@ -8,24 +8,24 @@ module.exports = {
     jasmine: false
   },
   rules: {
-    'comma-dangle': [2, 'never'],
-    'prefer-numeric-literals': 0,
-    'no-restricted-properties': [
+    "comma-dangle": [2, "never"],
+    "prefer-numeric-literals": 0,
+    "no-restricted-properties": [
       2,
       {
-        object: 'arguments',
-        property: 'callee',
-        message: 'arguments.callee is deprecated'
+        object: "arguments",
+        property: "callee",
+        message: "arguments.callee is deprecated"
       },
       {
-        property: '__defineGetter__',
-        message: 'Please use Object.defineProperty instead.'
+        property: "__defineGetter__",
+        message: "Please use Object.defineProperty instead."
       },
       {
-        property: '__defineSetter__',
-        message: 'Please use Object.defineProperty instead.'
+        property: "__defineSetter__",
+        message: "Please use Object.defineProperty instead."
       }
     ],
-    'no-var': 0
+    "no-var": 0
   }
 };

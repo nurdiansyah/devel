@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./base', './typescript', './prettier'].map(require.resolve),
+  extends: ["./base", "./typescript", "./prettier"].map(require.resolve),
   parserOptions: {
     ecmaVersion: 2018
   },
