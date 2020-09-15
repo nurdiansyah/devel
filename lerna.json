@@ -12,7 +12,6 @@
     "version": {
       "allowBranch": "master",
       "conventionalCommits": true,
-      "exact": true,
       "gitRemote": "origin"
     }
   },
