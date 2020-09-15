@@ -1,6 +1,6 @@
 {
   "name": "@deboxsoft/eslint-config-devel",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",
@@ -20,17 +20,17 @@
     "eslint-plugin-svelte3": "^2.7.3"
   },
   "devDependencies": {
-    "eslint": "7.4.0",
     "@babel/core": "^7.4.4",
     "babel-eslint": "^10.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "7.4.0",
     "svelte": "3.23.2",
     "tape": "^4.10.1"
   },
   "peerDependencies": {
-    "eslint": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^3.0.0 || ^4.0.0",
-    "@typescript-eslint/parser": "^3.5.0 || || ^4.0.0"
+    "@typescript-eslint/parser": "^3.5.0 || || ^4.0.0",
+    "eslint": "^7.0.0"
   },
   "gitHead": "0b91f933f72b2d58dde84acb2779539ccf48f48c"
 }

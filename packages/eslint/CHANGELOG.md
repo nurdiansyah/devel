@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/deboxsoft/devel/compare/@deboxsoft/eslint-config-devel@5.0.6...@deboxsoft/eslint-config-devel@6.1.0) (2020-09-15)
+
+
+### Features
+
+* typescript 4 ([42c5a98](https://github.com/deboxsoft/devel/commit/42c5a983e583f5bb6dad517b33cf2b9d0f270d55))
+
+
+### Performance Improvements
+
+* **eslint:** upgrade eslint 7 ([c7227cf](https://github.com/deboxsoft/devel/commit/c7227cfabf4f1d0713b34c15613d4cec80e4d3da))
+
+
+### BREAKING CHANGES
+
+* **eslint:** support eslint 7
+
+
+
+
+
 ## [5.0.6](https://github.com/deboxsoft/devel/compare/@deboxsoft/eslint-config-devel@5.0.5...@deboxsoft/eslint-config-devel@5.0.6) (2020-06-29)
 
 
