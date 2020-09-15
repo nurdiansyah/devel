@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/deboxsoft/devel/compare/@deboxsoft/devel@4.2.11...@deboxsoft/devel@4.3.0) (2020-09-15)
+
+
+### Bug Fixes
+
+* **core:** typescript 4 support ([22e7bbd](https://github.com/deboxsoft/devel/commit/22e7bbda69b0282cde6734826f0a6bc8000a2651))
+
+
+### Performance Improvements
+
+* **eslint:** upgrade eslint 7 ([c7227cf](https://github.com/deboxsoft/devel/commit/c7227cfabf4f1d0713b34c15613d4cec80e4d3da))
+
+
+### BREAKING CHANGES
+
+* **eslint:** support eslint 7
+
+
+
+
+
 ## [4.2.11](https://github.com/deboxsoft/devel/compare/@deboxsoft/devel@4.2.10...@deboxsoft/devel@4.2.11) (2020-06-21)
 
 
