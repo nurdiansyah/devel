@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/devel@5.0.0...@nurdiansyah/devel@5.0.1) (2020-11-14)
+
+
+### Bug Fixes
+
+* setup jest ([20bbc6a](https://github.com/nurdiansyah/devel/commit/20bbc6adf095960de3faffe2569e3df2c91d7c9f))
+
+
+
+
+
 # 5.0.0 (2020-11-14)
 
 
