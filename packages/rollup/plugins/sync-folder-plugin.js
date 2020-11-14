@@ -16,7 +16,7 @@ import syncFolders from "sync-folders";
  * @param {boolean} options.dev
  * @return {ReturnPlugin}
  */
-export default function (options) {
+export default function(options) {
   options = {
     type: options.dev ? "hardlink" : "copy",
     ...options
@@ -27,7 +27,7 @@ export default function (options) {
     generateBundle(opts, bundle) {
       const dir = opts.dir || path.dirname(opts.file);
       const assets = options.assets || [];
-      assets.forEach((asset) => {
+      assets.forEach(asset => {
         const filepath = path.resolve(asset);
         if (fs.existsSync(filepath)) {
           syncFolders(filepath, dir, options);

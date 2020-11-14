@@ -1,6 +1,6 @@
 {
-  "extends": [
-    "./packages/eslint",
-    "./packages/eslint/svelte"
-  ]
+  "extends": ["./packages/eslint", "./packages/eslint/svelte"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  }
 }

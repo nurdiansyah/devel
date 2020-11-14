@@ -23,7 +23,8 @@ const tsPlugin = () => {
 
 export const createRollupConfigs = (options = {}) => {
   const { production, serve, distDir } = options;
-  const useDynamicImports = process.env.BUNDLING === "dynamic" || isNollup || !!production;
+  const useDynamicImports =
+    process.env.BUNDLING === "dynamic" || isNollup || !!production;
   rimraf.sync(distDir);
   if (serve && !isNollup) {
     spassr({
@@ -43,7 +44,14 @@ export const createRollupConfigs = (options = {}) => {
 
 function baseConfig(options, ctx) {
   const { dynamicImports } = ctx;
-  const { staticDir, distDir, production, buildDir, svelteWrapper, rollupWrapper } = options;
+  const {
+    staticDir,
+    distDir,
+    production,
+    buildDir,
+    svelteWrapper,
+    rollupWrapper
+  } = options;
 
   const outputConfig = !!dynamicImports
     ? { format: "esm", dir: path.join(distDir, buildDir) }
@@ -51,19 +59,21 @@ function baseConfig(options, ctx) {
 
   const _svelteConfig = {
     dev: !production, // runtime checks
-    css: (css) => css.write(`bundle.css`),
+    css: css => css.write(`bundle.css`),
     hot: isNollup
   };
 
   const svelteConfig = svelteWrapper(_svelteConfig, ctx);
 
-  const transform = (contents) => {
+  const transform = contents => {
     const scriptTag =
       typeof options.scriptTag != "undefined"
         ? options.scriptTag
         : `<script type="module" defer src="/${buildDir}/debox-app.js"></script>`;
     const bundleTag = `<script defer src="/${buildDir}/bundle.js"></script>`;
-    return contents.toString().replace("__SCRIPT__", dynamicImports ? scriptTag : bundleTag);
+    return contents
+      .toString()
+      .replace("__SCRIPT__", dynamicImports ? scriptTag : bundleTag);
   };
 
   const _rollupConfig = {
@@ -83,7 +93,12 @@ function baseConfig(options, ctx) {
       copy({
         targets: [
           { src: [`${staticDir}/*`, "!*/(__index.html)"], dest: distDir },
-          { src: [`${staticDir}/__index.html`], dest: distDir, rename: "__app.html", transform }
+          {
+            src: [`${staticDir}/__index.html`],
+            dest: distDir,
+            rename: "__app.html",
+            transform
+          }
         ],
         copyOnce: true,
         flatten: false
@@ -97,7 +112,7 @@ function baseConfig(options, ctx) {
       // resolve matching modules from current working directory
       resolve({
         browser: true,
-        dedupe: (importee) => !!importee.match(/svelte(\/|$)/)
+        dedupe: importee => !!importee.match(/svelte(\/|$)/)
       }),
       tsPlugin(),
       commonjs(),
