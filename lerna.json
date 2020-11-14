@@ -6,9 +6,6 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
-    "publish": {
-      "registry": "https://artifactory.inhuaschool.com/npm"
-    },
     "version": {
       "allowBranch": "master",
       "conventionalCommits": true,
