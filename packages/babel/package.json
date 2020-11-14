@@ -1,11 +1,11 @@
 {
-  "name": "@deboxsoft/babel",
+  "name": "@nurdiansyah/babel",
   "version": "5.1.2",
   "description": "devel babel javascript",
   "author": "Nurdiansyah",
   "repository": {
     "type": "git",
-    "url": "ssh://github.com/deboxsoft/devel.git",
+    "url": "ssh://github.com/nurdiansyah/devel.git",
     "directory": "packages/babel"
   },
   "files": [

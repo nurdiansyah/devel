@@ -1,8 +1,13 @@
 {
-  "name": "@deboxsoft/devel",
+  "name": "@nurdiansyah/devel",
   "version": "4.3.0",
   "description": "develop base javascript",
   "author": "Nurdiansyah",
+  "repository": {
+    "type": "git",
+    "url": "ssh://github.com/nurdiansyah/devel.git",
+    "directory": "packages/core"
+  },
   "dependencies": {
     "identity-obj-proxy": "^3.0.0"
   },

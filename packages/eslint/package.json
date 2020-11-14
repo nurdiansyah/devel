@@ -1,12 +1,12 @@
 {
-  "name": "@deboxsoft/eslint-config-devel",
+  "name": "@nurdiansyah/eslint-config-devel",
   "version": "6.1.0",
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "ssh://github.com/deboxsoft/devel.git",
+    "url": "ssh://github.com/nurdiansyah/devel.git",
     "directory": "packages/eslint"
   },
   "dependencies": {
