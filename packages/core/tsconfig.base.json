@@ -1,21 +1,18 @@
 {
   "compilerOptions": {
     "target": "ES2019",
-    "module": "CommonJS",
     "lib": ["ES2019"],
-    "declaration": true,
     "moduleResolution": "node",
     "composite": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": false,
     "strictNullChecks": true,
     "strictPropertyInitialization": false,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "stripInternal": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "sourceMap": true,
     "importHelpers": true,
     "resolveJsonModule": true
   }
