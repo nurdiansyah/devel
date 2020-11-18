@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.1.0...@nurdiansyah/rollup@1.1.1) (2020-11-18)
+
+
+### Bug Fixes
+
+* @rollup/plugin-json ([f73602b](https://github.com/nurdiansyah/devel/commit/f73602b50dd187a5af33a3577fe41645cb3d4f80))
+
+
+
+
+
 # [1.1.0](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.0.1...@nurdiansyah/rollup@1.1.0) (2020-11-18)
 
 
