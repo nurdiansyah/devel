@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
-    "@deboxsoft/devel": "^4.2.2",
-    "@deboxsoft/eslint-config-devel": "*",
+    "@nurdiansyah/devel": "^5.0.2",
+    "@nurdiansyah/eslint-config-devel": "*",
     "@types/jest": "^24.0.25",
     "@types/node": "^13.1.4",
     "babel-jest": "^24.9.0",

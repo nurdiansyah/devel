@@ -2,7 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import sucrase from "@rollup/plugin-sucrase";
 import replace from "@rollup/plugin-replace";
-import svelte from "rollup-plugin-svelte-hot";
+import svelte from "rollup-plugin-svelte";
 import Hmr from "rollup-plugin-hot";
 import livereload from "rollup-plugin-livereload";
 import copy from "rollup-plugin-copy";
