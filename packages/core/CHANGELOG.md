@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.3](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/devel@5.0.2...@nurdiansyah/devel@5.0.3) (2020-12-02)
+
+**Note:** Version bump only for package @nurdiansyah/devel
+
+
+
+
+
 ## [5.0.2](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/devel@5.0.1...@nurdiansyah/devel@5.0.2) (2020-11-15)
 
 **Note:** Version bump only for package @nurdiansyah/devel
