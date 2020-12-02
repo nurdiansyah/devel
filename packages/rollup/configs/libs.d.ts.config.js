@@ -1,7 +1,6 @@
 const commonJs = require("@rollup/plugin-commonjs");
 const nodeResolve = require("@rollup/plugin-node-resolve").nodeResolve;
 const ts = require("@wessberg/rollup-plugin-ts");
-// const ts = require("@rollup/plugin-typescript");
 const json = require("@rollup/plugin-json");
 
 const corePluginsNode = ({
