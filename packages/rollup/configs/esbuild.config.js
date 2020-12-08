@@ -1,11 +1,11 @@
-import fs from "fs-extra";
-import path from "path";
-import dts from "rollup-plugin-dts";
-import esbuild from "rollup-plugin-esbuild";
-import typescript from "@rollup/plugin-typescript";
-import babel from "@rollup/plugin-babel";
-import commonjs from "@rollup/plugin-commonjs";
-import resolve from "@rollup/plugin-node-resolve";
+const fs = require("fs-extra");
+const path = require("path");
+const dts = require("rollup-plugin-dts");
+const esbuild = require("rollup-plugin-esbuild");
+const typescript = require("@rollup/plugin-typescript");
+const babel = require("@rollup/plugin-babel");
+const commonjs = require("@rollup/plugin-commonjs");
+const resolve = require("@rollup/plugin-node-resolve");
 
 const root = process.platform === "win32" ? path.resolve("/") : "/";
 const external = id => !id.startsWith(".") && !id.startsWith(root);
@@ -18,11 +18,7 @@ const buildTypescript = ({ withTsc = false }) => {
 };
 
 // Every module in the "input" directory gets its own bundle.
-export const multiBundle = ({
-  input = "src",
-  output = "libs",
-  ...config
-} = {}) =>
+const multiBundle = ({ input = "src", output = "libs", ...config } = {}) =>
   fs.readdirSync(input).reduce(
     (configs, file) =>
       configs.concat(
@@ -49,7 +45,7 @@ const getBundleConfig = ({
   sourceRoot
 });
 
-export const bundle = ({ withTsc = false, ...config } = {}) => {
+const bundle = ({ withTsc = false, ...config } = {}) => {
   config = getBundleConfig(config);
   return [
     jsBundle(config, { withTsc }),
@@ -57,7 +53,7 @@ export const bundle = ({ withTsc = false, ...config } = {}) => {
   ];
 };
 
-export const jsBundle = (config, { withTsc }) => ({
+const jsBundle = (config, { withTsc }) => ({
   input: config.input,
   output: [
     {
@@ -81,7 +77,7 @@ export const jsBundle = (config, { withTsc }) => ({
   plugins: [buildTypescript({ withTsc })]
 });
 
-export const dtsBundle = (config, format) => ({
+const dtsBundle = (config, format) => ({
   input: config.input,
   output: [
     {
@@ -102,7 +98,7 @@ export const dtsBundle = (config, format) => ({
 // Used for the ".umd" bundle
 const globals = {};
 
-export const umdBundle = (name, config) => {
+const umdBundle = (name, config) => {
   config = getBundleConfig(config);
   return {
     input: config.input,
@@ -171,4 +167,10 @@ const rewriteSourcePaths = config => {
     path.join(config.sourceRoot || "", path.relative(outToIn, file));
 };
 
-export default bundle();
+module.exports = {
+  bundle,
+  jsBundle,
+  dtsBundle,
+  umdBundle,
+  multiBundle
+};
