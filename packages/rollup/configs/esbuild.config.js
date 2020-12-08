@@ -1,11 +1,11 @@
 const fs = require("fs-extra");
 const path = require("path");
-const dts = require("rollup-plugin-dts");
+const dts = require("rollup-plugin-dts").default;
 const esbuild = require("rollup-plugin-esbuild");
-const typescript = require("@rollup/plugin-typescript");
-const babel = require("@rollup/plugin-babel");
-const commonjs = require("@rollup/plugin-commonjs");
-const resolve = require("@rollup/plugin-node-resolve");
+const typescript = require("@rollup/plugin-typescript").default;
+const babel = require("@rollup/plugin-babel").default;
+const commonjs = require("@rollup/plugin-commonjs").default;
+const resolve = require("@rollup/plugin-node-resolve").default;
 
 const root = process.platform === "win32" ? path.resolve("/") : "/";
 const external = id => !id.startsWith(".") && !id.startsWith(root);
