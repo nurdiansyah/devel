@@ -1,6 +1,6 @@
 {
   "name": "@nurdiansyah/eslint-config-devel",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",

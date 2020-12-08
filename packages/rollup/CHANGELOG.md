@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.2.0...@nurdiansyah/rollup@1.2.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* **rollup:** esm to cjs ([0f10d82](https://github.com/nurdiansyah/devel/commit/0f10d82cb4e02dd5252318b361cd39d103b6cf1f))
+
+
+
+
+
 # [1.2.0](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.1.2...@nurdiansyah/rollup@1.2.0) (2020-12-08)
 
 
