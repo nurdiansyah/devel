@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.1.2...@nurdiansyah/rollup@1.2.0) (2020-12-08)
+
+
+### Features
+
+* **rollup:** add esbuild config ([041f261](https://github.com/nurdiansyah/devel/commit/041f26154e74ebf43be151e2b194ad4eb9bd710e))
+
+
+
+
+
 ## [1.1.2](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.1.1...@nurdiansyah/rollup@1.1.2) (2020-12-02)
 
 **Note:** Version bump only for package @nurdiansyah/rollup
