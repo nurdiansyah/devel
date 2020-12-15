@@ -2,17 +2,9 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "module": "ES6",
-    "composite": false,
     "sourceMap": true,
     "lib": ["DOM", "ES2019"],
     "jsx": "preserve",
-    "types": [
-      "svelte",
-      "node",
-      "jest",
-      "@testing-library/jest-dom",
-      "cypress",
-      "@testing-library/cypress"
-    ]
+    "types": ["svelte", "node", "jest", "@testing-library/jest-dom"]
   }
 }
