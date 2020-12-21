@@ -4,7 +4,6 @@
     "lib": ["ES2019"],
     "moduleResolution": "node",
     "isolatedModules": true,
-    "forceConsistentCasingInFileNames": true,
     "strict": false,
     "strictNullChecks": true,
     "strictPropertyInitialization": false,
