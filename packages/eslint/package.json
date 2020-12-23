@@ -38,5 +38,6 @@
   "publishConfig": {
     "access": "public"
   },
+  "preferUnplugged": true,
   "gitHead": "0b91f933f72b2d58dde84acb2779539ccf48f48c"
 }

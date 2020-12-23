@@ -20,5 +20,6 @@
   "publishConfig": {
     "access": "public"
   },
+  "preferUnplugged": true,
   "gitHead": "2a50b6b0bc934db5bb3aceb9cd38eb81f0f61183"
 }
