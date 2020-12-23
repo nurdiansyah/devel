@@ -59,4 +59,12 @@ buck-out/
 pnpm-debug.log
 pnpm-lock.yaml
 lerna-debug.log
+
+# yarn
 yarn.lock
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
