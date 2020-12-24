@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.3.0...@nurdiansyah/rollup@1.3.1) (2020-12-24)
+
+**Note:** Version bump only for package @nurdiansyah/rollup
+
+
+
+
+
 # [1.3.0](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.2.2...@nurdiansyah/rollup@1.3.0) (2020-12-23)
 
 
