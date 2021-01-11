@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs-extra");
 const path = require("path");
 const dts = require("rollup-plugin-dts").default;
 const esbuild = require("rollup-plugin-esbuild");
