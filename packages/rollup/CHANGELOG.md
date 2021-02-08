@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.3](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.3.2...@nurdiansyah/rollup@1.3.3) (2021-02-08)
+
+
+### Bug Fixes
+
+* **rollup:** remove routify config ([0922d52](https://github.com/nurdiansyah/devel/commit/0922d52749d14e26a3705bb808dd4860a0d9d4b3))
+
+
+
+
+
 ## [1.3.2](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.3.1...@nurdiansyah/rollup@1.3.2) (2021-01-11)
 
 
