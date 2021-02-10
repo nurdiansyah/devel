@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/devel@5.1.0...@nurdiansyah/devel@5.1.1) (2021-02-10)
+
+
+### Bug Fixes
+
+* **core:** jest config ([ed23170](https://github.com/nurdiansyah/devel/commit/ed2317033370e08a6cd1c268194c04cfb88c94e4))
+
+
+
+
+
 # [5.1.0](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/devel@5.0.7...@nurdiansyah/devel@5.1.0) (2020-12-23)
 
 
