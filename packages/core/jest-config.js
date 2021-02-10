@@ -1,20 +1,10 @@
 module.exports = {
-  globals: {
-    "svelte-jester": {
-      // Let's avoid type checking during tests (performance boost).
-      diagnostics: false
-    }
-  },
+  globals: {},
   transform: {
-    "^.+\\.[jt]sx?$": "@sucrase/jest-plugin",
-    "^.+\\.svelte$": ["svelte-jester", { preprocess: true, rootMode: "upward" }]
+    "^.+\\.[jt]sx?$": "@sucrase/jest-plugin"
   },
   testRegex: "(/(tests|__tests__)/.*.(test|spec)).(jsx?|tsx?)$",
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node", "svelte"],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   coveragePathIgnorePatterns: ["((tests|__tests__)/.*.mock).(jsx?|tsx?)$"],
-  setupFilesAfterEnv: [
-    "@testing-library/jest-dom",
-    "@testing-library/jest-dom/extend-expect"
-  ],
   bail: false
 };

@@ -1,5 +1,5 @@
 {
-  "extends": ["./packages/eslint", "./packages/eslint/svelte"],
+  "extends": ["./packages/eslint"],
   "parserOptions": {
     "ecmaVersion": 2018
   }
