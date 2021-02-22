@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.3.3...@nurdiansyah/rollup@1.3.4) (2021-02-22)
+
+
+### Bug Fixes
+
+* **rollup:** fix dependencies deprecated ([da55f83](https://github.com/nurdiansyah/devel/commit/da55f8387be7f35fbdc2966febe5581f6f6241db))
+
+
+
+
+
 ## [1.3.3](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.3.2...@nurdiansyah/rollup@1.3.3) (2021-02-08)
 
 
