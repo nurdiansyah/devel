@@ -5,7 +5,7 @@ const esbuild = require("rollup-plugin-esbuild");
 const root = process.platform === "win32" ? path.resolve("/") : "/";
 const external = id => !id.startsWith(".") && !id.startsWith(root);
 
-const jsBundle = (config, { withTsc, withUmd }) => ({
+const jsBundle = (config, { withUmd }) => ({
   input: config.input,
   output: [
     {
