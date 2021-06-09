@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.4](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.6.3...@nurdiansyah/rollup@1.6.4) (2021-06-09)
+
+
+### Bug Fixes
+
+* **rollup:** fix config ([b0dc995](https://github.com/nurdiansyah/devel/commit/b0dc9959e4ca29d13c627d49a663a0f13246c283))
+
+
+
+
+
 ## [1.6.3](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.6.2...@nurdiansyah/rollup@1.6.3) (2021-06-09)
 
 
