@@ -41,7 +41,7 @@ const jsBundle = (
     }
   ],
   external,
-  plugins: [sucrase()]
+  plugins: [sucrase({ transform: ["typescript"] })]
 });
 
 // Used for the ".umd" bundle
