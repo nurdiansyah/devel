@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.2](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.6.1...@nurdiansyah/rollup@1.6.2) (2021-06-09)
+
+
+### Bug Fixes
+
+* **rollup:** typo transforms ([b302190](https://github.com/nurdiansyah/devel/commit/b30219054829e35e6ef0e2e5c35e4e7e57dcd7ce))
+
+
+
+
+
 ## [1.6.1](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.6.0...@nurdiansyah/rollup@1.6.1) (2021-06-09)
 
 
