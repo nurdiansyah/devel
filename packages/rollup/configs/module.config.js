@@ -22,7 +22,7 @@ const jsBundle = (
   input: config.input,
   output: [
     {
-      file: config.js,
+      file: config.output,
       format: "esm",
       paths: rewritePaths(),
       sourcemap: config.sourcemap,
