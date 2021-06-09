@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.6.0...@nurdiansyah/rollup@1.6.1) (2021-06-09)
+
+
+### Bug Fixes
+
+* **rollup:** sucrase transform ([3386ef5](https://github.com/nurdiansyah/devel/commit/3386ef59150bfb60756bbcc087711dda21d6bcc2))
+
+
+
+
+
 # [1.6.0](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.4.1...@nurdiansyah/rollup@1.6.0) (2021-06-09)
 
 
