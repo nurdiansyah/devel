@@ -13,7 +13,7 @@ const jsBundle = (
   {
     withUmd,
     isModule = false,
-    whitelistDeps = [],
+    incDeps = [],
     jsonOptions = {},
     nodeResolveOptions = {},
     commonJsOptions = {}
@@ -50,7 +50,7 @@ const jsBundle = (
       sourcemapExcludeSources: config.sourcemapExcludeSources
     }
   ],
-  external,
+  external: id => external(id) && incDeps.findIndex(_ => _ === id) > -1,
   plugins: [
     json(jsonOptions),
     nodeResolve(nodeResolveOptions),
