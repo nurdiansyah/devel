@@ -1,15 +1,18 @@
 const fs = require("fs-extra");
 const path = require("path");
-const esbuild = require("rollup-plugin-esbuild");
+const sucrase = require("@rollup/plugin-sucrase");
 
 const root = process.platform === "win32" ? path.resolve("/") : "/";
 const external = id => !id.startsWith(".") && !id.startsWith(root);
 
-const jsBundle = (config, { withUmd }) => ({
+const jsBundle = (
+  config,
+  { withUmd, isModule = false } = { isModule: true }
+) => ({
   input: config.input,
   output: [
     {
-      file: config.output,
+      file: config.js,
       format: "esm",
       paths: rewritePaths(),
       sourcemap: config.sourcemap,
@@ -17,7 +20,9 @@ const jsBundle = (config, { withUmd }) => ({
       sourcemapExcludeSources: config.sourcemapExcludeSources
     },
     {
-      file: config.output.replace(/\.js$/, ".cjs.js"),
+      file: isModule
+        ? config.output.replace(/\.js$/, ".cjs")
+        : config.output.replace(/\.js$/, ".cjs.js"),
       format: "cjs",
       paths: rewritePaths({}),
       sourcemap: config.sourcemap,
@@ -36,7 +41,7 @@ const jsBundle = (config, { withUmd }) => ({
     }
   ],
   external,
-  plugins: [esbuild()]
+  plugins: [sucrase()]
 });
 
 // Used for the ".umd" bundle
