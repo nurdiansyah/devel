@@ -1,5 +1,8 @@
 const fs = require("fs-extra");
 const path = require("path");
+const commonJs = require("@rollup/plugin-commonjs");
+const nodeResolve = require("@rollup/plugin-node-resolve").nodeResolve;
+const json = require("@rollup/plugin-json");
 const sucrase = require("@rollup/plugin-sucrase");
 
 const root = process.platform === "win32" ? path.resolve("/") : "/";
@@ -7,7 +10,14 @@ const external = id => !id.startsWith(".") && !id.startsWith(root);
 
 const jsBundle = (
   config,
-  { withUmd, isModule = false } = { isModule: true }
+  {
+    withUmd,
+    isModule = false,
+    whitelistDeps = [],
+    jsonOptions = {},
+    nodeResolveOptions = {},
+    commonJsOptions = {}
+  } = { isModule: true }
 ) => ({
   input: config.input,
   output: [
@@ -41,7 +51,12 @@ const jsBundle = (
     }
   ],
   external,
-  plugins: [sucrase({ transforms: ["typescript"] })]
+  plugins: [
+    json(jsonOptions),
+    nodeResolve(nodeResolveOptions),
+    commonJs(commonJsOptions),
+    sucrase({ transforms: ["typescript"] })
+  ]
 });
 
 // Used for the ".umd" bundle
