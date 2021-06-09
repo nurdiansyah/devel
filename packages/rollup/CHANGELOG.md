@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.4.1...@nurdiansyah/rollup@1.6.0) (2021-06-09)
+
+
+### Features
+
+* **rollup:** support type module and change esbuild to sucrase ([ea578ab](https://github.com/nurdiansyah/devel/commit/ea578aba613dbf1be491a32c6585145202f7cb7c))
+
+
+
+
+
 ## [1.4.1](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.4.0...@nurdiansyah/rollup@1.4.1) (2021-03-31)
 
 
