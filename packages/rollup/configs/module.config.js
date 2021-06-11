@@ -4,7 +4,7 @@ const commonJs = require("@rollup/plugin-commonjs");
 const nodeResolve = require("@rollup/plugin-node-resolve").nodeResolve;
 const json = require("@rollup/plugin-json");
 const sucrase = require("@rollup/plugin-sucrase");
-import typescript from "@rollup/plugin-typescript";
+const typescript = require("@rollup/plugin-typescript");
 
 const root = process.platform === "win32" ? path.resolve("/") : "/";
 const external = id => !id.startsWith(".") && !id.startsWith(root);
