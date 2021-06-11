@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.6](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.6.5...@nurdiansyah/rollup@1.6.6) (2021-06-11)
+
+
+### Bug Fixes
+
+* **rollup:** add dep plugin typescript ([c2fb27a](https://github.com/nurdiansyah/devel/commit/c2fb27a56084fd1e4ff91b58afb069bf6fa1e2db))
+* **rollup:** fix external ([004b7c7](https://github.com/nurdiansyah/devel/commit/004b7c7dada09cd03017a5c17a3e21d8d832c2d0))
+* **rollup:** fix typescript ([93c7981](https://github.com/nurdiansyah/devel/commit/93c7981d9c9db7804e5c41ad204a759409cc068c))
+
+
+
+
+
 ## [1.6.5](https://github.com/nurdiansyah/devel/compare/@nurdiansyah/rollup@1.6.4...@nurdiansyah/rollup@1.6.5) (2021-06-09)
 
 
