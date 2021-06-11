@@ -4,14 +4,28 @@ const commonJs = require("@rollup/plugin-commonjs");
 const nodeResolve = require("@rollup/plugin-node-resolve").nodeResolve;
 const json = require("@rollup/plugin-json");
 const sucrase = require("@rollup/plugin-sucrase");
+import typescript from "@rollup/plugin-typescript";
 
 const root = process.platform === "win32" ? path.resolve("/") : "/";
 const external = id => !id.startsWith(".") && !id.startsWith(root);
 
+const ts_plugin = ({ isPublish = false } = {}) =>
+  isPublish
+    ? typescript({
+        include: "src/**",
+        typescript: require("typescript")
+      })
+    : sucrase({
+        transforms: ["typescript"]
+      });
+
 const jsBundle = (
   config,
   {
-    withUmd,
+    /**
+     * klo isPublish true menggunakan typescript plugin dan klo false menggunaka sucrase
+     */
+    isPublish = false,
     isModule = false,
     incDeps = [],
     jsonOptions = {},
@@ -38,16 +52,6 @@ const jsBundle = (
       sourcemap: config.sourcemap,
       sourcemapPathTransform: rewriteSourcePaths(config),
       sourcemapExcludeSources: config.sourcemapExcludeSources
-    },
-    withUmd && {
-      file: config.output.replace(/\.js$/, ".umd.js"),
-      format: "umd",
-      name: config.name,
-      globals: {},
-      paths: rewritePaths({}),
-      sourcemap: config.sourcemap,
-      sourcemapPathTransform: rewriteSourcePaths(config),
-      sourcemapExcludeSources: config.sourcemapExcludeSources
     }
   ],
   external: id => external(id) && incDeps.findIndex(_ => _ === id) === -1,
@@ -55,11 +59,9 @@ const jsBundle = (
     json(jsonOptions),
     nodeResolve(nodeResolveOptions),
     commonJs(commonJsOptions),
-    sucrase({ transforms: ["typescript"] })
+    ts_plugin({ isPublish })
   ]
 });
-
-// Used for the ".umd" bundle
 
 const pkgCache = Object.create(null);
 const readPackageJson = dir =>
