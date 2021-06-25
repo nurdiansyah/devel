@@ -36,7 +36,9 @@ const jsBundle = (
   input: config.input,
   output: [
     {
-      file: config.output,
+      file: isModule
+        ? config.output.replace(/\.js$/, ".js")
+        : config.output.replace(/\.js$/, ".mjs"),
       format: "esm",
       paths: rewritePaths(),
       sourcemap: config.sourcemap,
@@ -46,7 +48,7 @@ const jsBundle = (
     {
       file: isModule
         ? config.output.replace(/\.js$/, ".cjs")
-        : config.output.replace(/\.js$/, ".cjs.js"),
+        : config.output.replace(/\.js$/, ".js"),
       format: "cjs",
       paths: rewritePaths({}),
       sourcemap: config.sourcemap,
