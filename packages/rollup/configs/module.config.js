@@ -7,7 +7,7 @@ const sucrase = require("@rollup/plugin-sucrase");
 const typescript = require("@rollup/plugin-typescript");
 
 const root = process.platform === "win32" ? path.resolve("/") : "/";
-const external = id => !id.startsWith(".") && !id.startsWith(root);
+const external = (id) => !id.startsWith(".") && !id.startsWith(root);
 
 const ts_plugin = ({ isPublish = false } = {}) =>
   isPublish
@@ -56,7 +56,7 @@ const jsBundle = (
       sourcemapExcludeSources: config.sourcemapExcludeSources
     }
   ],
-  external: id => external(id) && incDeps.findIndex(_ => _ === id) === -1,
+  external: (id) => external(id) && incDeps.findIndex((_) => _ === id) === -1,
   plugins: [
     json(jsonOptions),
     nodeResolve(nodeResolveOptions),
@@ -66,23 +66,22 @@ const jsBundle = (
 });
 
 const pkgCache = Object.create(null);
-const readPackageJson = dir =>
-  pkgCache[dir] ||
-  (pkgCache[dir] = fs.readJsonSync(path.join(dir, "package.json")));
+const readPackageJson = (dir) =>
+  pkgCache[dir] || (pkgCache[dir] = fs.readJsonSync(path.join(dir, "package.json")));
 
 const pkg = fs.readJsonSync(path.resolve("package.json"));
 const rewritePaths = (opts = {}) => {
   const deps = pkg.dependencies || {};
 
   const locals = Object.entries(deps).filter(
-    entry => entry[1].startsWith("link:") && (entry[1] = entry[1].slice(5))
+    (entry) => entry[1].startsWith("link:") && (entry[1] = entry[1].slice(5))
   );
   const localPkgs = locals.reduce((pkgs, [name, version]) => {
     pkgs[name] = readPackageJson(path.resolve(version));
     return pkgs;
   }, Object.create(null));
 
-  const resolveLocal = modulePath => {
+  const resolveLocal = (modulePath) => {
     for (const [name] of locals) {
       if (modulePath === name || modulePath.startsWith(name + "/")) {
         const dep = localPkgs[name];
@@ -91,7 +90,7 @@ const rewritePaths = (opts = {}) => {
     }
   };
 
-  return modulePath => {
+  return (modulePath) => {
     let depId = resolveLocal(modulePath);
     if (!depId) {
       return modulePath;
@@ -100,13 +99,9 @@ const rewritePaths = (opts = {}) => {
   };
 };
 
-const rewriteSourcePaths = config => {
-  const outToIn = path.relative(
-    path.dirname(config.output),
-    path.dirname(config.input)
-  );
-  return file =>
-    path.join(config.sourceRoot || "", path.relative(outToIn, file));
+const rewriteSourcePaths = (config) => {
+  const outToIn = path.relative(path.dirname(config.output), path.dirname(config.input));
+  return (file) => path.join(config.sourceRoot || "", path.relative(outToIn, file));
 };
 
 module.exports = jsBundle;
