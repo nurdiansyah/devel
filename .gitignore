@@ -57,7 +57,6 @@ buck-out/
 /graphql.schema.json
 /graphql.config.json
 pnpm-debug.log
-pnpm-lock.yaml
 lerna-debug.log
 
 # yarn
@@ -68,3 +67,7 @@ yarn.lock
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+.bic_cache
+packages/*/index.*
+packages/*/types
