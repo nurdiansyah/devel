@@ -1,8 +1,7 @@
 import * as mongodb from "mongodb";
 import { MongoMemoryServer } from "mongodb-memory-server";
 import { Container } from "@deboxsoft/module-core";
-import { MONGO_CLIENT_KEY, MONGO_DB_KEY } from "../MongoBase";
-import { createSessionManager } from "../SessionManager";
+import { MONGO_CLIENT_KEY, MONGO_DB_KEY, createSessionManager } from "@deboxsoft/module-mongo";
 
 // May require additional time for downloading MongoDB binaries
 

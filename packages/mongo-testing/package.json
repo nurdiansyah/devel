@@ -1,0 +1,42 @@
+{
+  "name": "@nurdiansyah/mongo-testing",
+  "version": "3.0.0",
+  "description": "develop base rollup",
+  "author": "Nurdiansyah",
+  "repository": {
+    "type": "git",
+    "url": "ssh://github.com/nurdiansyah/devel.git",
+    "directory": "packages/mongo-testing"
+  },
+  "scripts": {
+    "build": "run-p build:rollup build:tsc",
+    "build:rollup": "rollup -c",
+    "build:tsc": "rimraf types && tsc",
+    "lint": "eslint --fix 'src/**/*.ts'",
+    "test": "uvu -r ts-node/register",
+    "bump": "pnpm run build && bump -c \"release mongo v\"",
+    "release": "pnpm run bump -- -t \"mongo-v\" && pnpm publish",
+    "release:dev": "pnpm run bump -- -p prerelease && pnpm publish --tag dev --no-git-checks"
+  },
+  "dependencies": {
+    "@deboxsoft/module-core": "^2.2.12",
+    "@deboxsoft/module-mongo": "^2.3.9",
+    "mongodb-memory-server": "^6.9.3"
+  },
+  "devDependencies": {
+    "@nurdiansyah/bump": "^6.1.2",
+    "@nurdiansyah/rollup": "workspace:~",
+    "@nurdiansyah/uvu": "^0.5.1",
+    "@types/mongodb": "3.6.3",
+    "fs-extra": "^10.0.0",
+    "mongodb": "^3.7.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "2.51.1"
+  },
+  "peerDependencies": {
+    "mongodb": "^3.7.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
