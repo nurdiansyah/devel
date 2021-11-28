@@ -1,6 +1,6 @@
 {
   "name": "@nurdiansyah/eslint-config-devel",
-  "version": "8.0.2",
+  "version": "8.0.3",
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",
@@ -10,8 +10,8 @@
     "directory": "packages/eslint"
   },
   "scripts": {
-    "release": "bump patch -c && pnpm run publish",
-    "release:minor": "bump minor -c && pnpm run publish"
+    "release": "bump patch -c && pnpm publish",
+    "release:minor": "bump minor -c && pnpm publish"
   },
   "dependencies": {
     "confusing-browser-globals": "^1.0.9",
