@@ -24,10 +24,13 @@
       "packages/*"
     ]
   },
+  "dependencies": {
+
+  },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@nurdiansyah/bump": "^6.1.2",
-    "@nurdiansyah/eslint-config-devel": "^7.1.1",
+    "@nurdiansyah/eslint-config-devel": "workspace:*",
     "@types/node": "^13.1.4",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
