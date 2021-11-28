@@ -7,7 +7,8 @@ module.exports = {
     sourceType: "module"
   },
   rules: {
-    strict: 2
+    strict: 2,
+    "@typescript-eslint/ban-ts-comment": 0
   },
   overrides: [
     {
