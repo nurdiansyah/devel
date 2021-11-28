@@ -8,7 +8,8 @@ module.exports = {
   },
   rules: {
     strict: 2,
-    "@typescript-eslint/ban-ts-comment": 0
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-explicit-any": 0
   },
   overrides: [
     {
