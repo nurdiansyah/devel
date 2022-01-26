@@ -7,7 +7,7 @@ const sucrase = require("@rollup/plugin-sucrase");
 const typescript = require("@rollup/plugin-typescript");
 
 const root = process.platform === "win32" ? path.resolve("/") : "/";
-const external = (id) => !id.startsWith(".") && !id.startsWith(root);
+const externalLocal = (id) => !id.startsWith(".") && !id.startsWith(root);
 
 const ts_plugin = ({ isPublish = false } = {}) =>
   isPublish
@@ -26,19 +26,20 @@ const jsBundle = (
      * klo isPublish true menggunakan typescript plugin dan klo false menggunaka sucrase
      */
     isPublish = false,
-    isModule = false,
+    type = "commonjs",
     incDeps = [],
     jsonOptions = {},
     nodeResolveOptions = {},
     commonJsOptions = {}
-  } = { isModule: true }
+  } = {}
 ) => ({
   input: config.input,
   output: [
     {
-      file: isModule
-        ? config.output.replace(/\.js$/, ".js")
-        : config.output.replace(/\.js$/, ".mjs"),
+      file:
+        type === "module"
+          ? config.output.replace(/\.js$/, ".js")
+          : config.output.replace(/\.js$/, ".mjs"),
       format: "esm",
       paths: rewritePaths(),
       sourcemap: config.sourcemap,
@@ -46,9 +47,10 @@ const jsBundle = (
       sourcemapExcludeSources: config.sourcemapExcludeSources
     },
     {
-      file: isModule
-        ? config.output.replace(/\.js$/, ".cjs")
-        : config.output.replace(/\.js$/, ".js"),
+      file:
+        type === "module"
+          ? config.output.replace(/\.js$/, ".cjs")
+          : config.output.replace(/\.js$/, ".js"),
       format: "cjs",
       paths: rewritePaths({}),
       sourcemap: config.sourcemap,
