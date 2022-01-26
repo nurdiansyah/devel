@@ -10,7 +10,7 @@
   },
   "main": "./configs/module.config.js",
   "scripts": {
-    "release": "bump && pnpm publish"
+    "release": "bump -c && pnpm publish"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",

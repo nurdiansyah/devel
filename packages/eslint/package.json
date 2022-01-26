@@ -10,8 +10,8 @@
     "directory": "packages/eslint"
   },
   "scripts": {
-    "release": "bump && pnpm publish",
-    "release:minor": "bump minor -c && pnpm publish"
+    "release": "bump -c && pnpm publish",
+    "release:minor": "bump minor && pnpm publish"
   },
   "dependencies": {
     "confusing-browser-globals": "^1.0.9",
