@@ -10,7 +10,7 @@
     "directory": "packages/eslint"
   },
   "scripts": {
-    "release": "bump patch -c && pnpm publish",
+    "release": "bump && pnpm publish",
     "release:minor": "bump minor -c && pnpm publish"
   },
   "dependencies": {

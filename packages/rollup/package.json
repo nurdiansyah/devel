@@ -1,6 +1,6 @@
 {
   "name": "@nurdiansyah/rollup",
-  "version": "1.6.8",
+  "version": "1.7.0",
   "description": "develop base rollup",
   "author": "Nurdiansyah",
   "repository": {
@@ -9,6 +9,9 @@
     "directory": "packages/rollup"
   },
   "main": "./configs/module.config.js",
+  "scripts": {
+    "release": "bump && pnpm publish"
+  },
   "dependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-json": "^4.1.0",
