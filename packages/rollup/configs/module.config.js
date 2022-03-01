@@ -58,7 +58,7 @@ const jsBundle = (
       sourcemapExcludeSources: config.sourcemapExcludeSources
     }
   ],
-  external: (id) => external(id) && incDeps.findIndex((_) => _ === id) === -1,
+  external: (id) => externalLocal(id) && incDeps.findIndex((_) => _ === id) === -1,
   plugins: [
     json(jsonOptions),
     nodeResolve(nodeResolveOptions),
