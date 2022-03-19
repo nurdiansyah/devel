@@ -26,54 +26,61 @@ const jsBundle = (
     isPublish = false,
     type = "commonjs",
     jsonOptions = {},
-    nodeResolveOptions = {},
+    nodeResolveOptions = {
+      preferBuiltins: true
+    },
+    externalDependencies = [],
     commonJsOptions = {},
     tsInclude = ["src/**"]
   } = {}
-) => ({
-  input: config.input,
-  output: [
-    {
-      file:
-        type === "module"
-          ? config.output.replace(/\.js$/, ".js")
-          : config.output.replace(/\.js$/, ".mjs"),
-      format: "esm",
-      paths: rewritePaths(),
-      sourcemap: config.sourcemap,
-      sourcemapPathTransform: rewriteSourcePaths(config),
-      sourcemapExcludeSources: config.sourcemapExcludeSources
-    },
-    {
-      file:
-        type === "module"
-          ? config.output.replace(/\.js$/, ".cjs")
-          : config.output.replace(/\.js$/, ".js"),
-      format: "cjs",
-      paths: rewritePaths({}),
-      sourcemap: config.sourcemap,
-      sourcemapPathTransform: rewriteSourcePaths(config),
-      sourcemapExcludeSources: config.sourcemapExcludeSources
-    }
-  ],
-  external: [
-    ...Object.keys(pkg?.peerDependencies || {}),
-    ...Object.keys(pkg?.optionalDependencies || {})
-  ],
-  plugins: [
-    json(jsonOptions),
-    nodeResolve(nodeResolveOptions),
-    commonJs(commonJsOptions),
-    ts_plugin({ isPublish, include: tsInclude })
-  ]
-});
+) => {
+  const _externalDependencies = {
+    ...(pkg.peerDependencies || {}),
+    ...(pkg.optionalDependencies || {})
+  };
+  return {
+    input: config.input,
+    output: [
+      {
+        file:
+          type === "module"
+            ? config.output.replace(/\.js$/, ".js")
+            : config.output.replace(/\.js$/, ".mjs"),
+        format: "esm",
+        paths: rewritePaths(),
+        sourcemap: config.sourcemap,
+        sourcemapPathTransform: rewriteSourcePaths(config),
+        sourcemapExcludeSources: config.sourcemapExcludeSources
+      },
+      {
+        file:
+          type === "module"
+            ? config.output.replace(/\.js$/, ".cjs")
+            : config.output.replace(/\.js$/, ".js"),
+        format: "cjs",
+        paths: rewritePaths({}),
+        sourcemap: config.sourcemap,
+        sourcemapPathTransform: rewriteSourcePaths(config),
+        sourcemapExcludeSources: config.sourcemapExcludeSources
+      }
+    ],
+    external: [...externalDependencies, ...Object.keys(_externalDependencies)],
+    plugins: [
+      json(jsonOptions),
+      nodeResolve(nodeResolveOptions),
+      commonJs(commonJsOptions),
+      ts_plugin({ isPublish, include: tsInclude })
+    ]
+  };
+};
 
 const pkgCache = Object.create(null);
-const readPackageJson = (dir) =>
-  pkgCache[dir] || (pkgCache[dir] = fs.readJsonSync(path.join(dir, "package.json")));
-
 const pkg = fs.readJsonSync(path.resolve("package.json"));
-const rewritePaths = () => {
+
+function readPackageJson(dir) {
+  return pkgCache[dir] || (pkgCache[dir] = fs.readJsonSync(path.join(dir, "package.json")));
+}
+function rewritePaths() {
   const deps = pkg.dependencies || {};
 
   const locals = Object.entries(deps).filter(
@@ -100,11 +107,11 @@ const rewritePaths = () => {
     }
     return depId;
   };
-};
+}
 
-const rewriteSourcePaths = (config) => {
+function rewriteSourcePaths(config) {
   const outToIn = path.relative(path.dirname(config.output), path.dirname(config.input));
   return (file) => path.join(config.sourceRoot || "", path.relative(outToIn, file));
-};
+}
 
 module.exports = jsBundle;
