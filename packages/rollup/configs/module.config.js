@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs-extra");
 const path = require("path");
 const commonJs = require("@rollup/plugin-commonjs");
@@ -6,13 +7,10 @@ const json = require("@rollup/plugin-json");
 const sucrase = require("@rollup/plugin-sucrase");
 const typescript = require("@rollup/plugin-typescript");
 
-const root = process.platform === "win32" ? path.resolve("/") : "/";
-const externalLocal = (id) => !id.startsWith(".") && !id.startsWith(root);
-
-const ts_plugin = ({ isPublish = false } = {}) =>
+const ts_plugin = ({ isPublish = false, include } = {}) =>
   isPublish
     ? typescript({
-        include: "src/**",
+        include,
         typescript: require("typescript")
       })
     : sucrase({
@@ -27,10 +25,10 @@ const jsBundle = (
      */
     isPublish = false,
     type = "commonjs",
-    incDeps = [],
     jsonOptions = {},
     nodeResolveOptions = {},
-    commonJsOptions = {}
+    commonJsOptions = {},
+    tsInclude = ["src/**"]
   } = {}
 ) => ({
   input: config.input,
@@ -58,12 +56,15 @@ const jsBundle = (
       sourcemapExcludeSources: config.sourcemapExcludeSources
     }
   ],
-  external: (id) => externalLocal(id) && incDeps.findIndex((_) => _ === id) === -1,
+  external: [
+    ...Object.keys(pkg?.peerDependencies || {}),
+    ...Object.keys(pkg?.optionalDependencies || {})
+  ],
   plugins: [
     json(jsonOptions),
     nodeResolve(nodeResolveOptions),
     commonJs(commonJsOptions),
-    ts_plugin({ isPublish })
+    ts_plugin({ isPublish, include: tsInclude })
   ]
 });
 
@@ -72,7 +73,7 @@ const readPackageJson = (dir) =>
   pkgCache[dir] || (pkgCache[dir] = fs.readJsonSync(path.join(dir, "package.json")));
 
 const pkg = fs.readJsonSync(path.resolve("package.json"));
-const rewritePaths = (opts = {}) => {
+const rewritePaths = () => {
   const deps = pkg.dependencies || {};
 
   const locals = Object.entries(deps).filter(
