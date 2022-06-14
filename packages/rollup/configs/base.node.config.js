@@ -1,26 +1,29 @@
-const commonJs = require("@rollup/plugin-commonjs");
-const nodeResolve = require("@rollup/plugin-node-resolve").nodeResolve;
-const json = require("@rollup/plugin-json");
-const ts = require("@rollup/plugin-typescript");
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import commonJs from "@rollup/plugin-commonjs";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import json from "@rollup/plugin-json";
+import ts from "@rollup/plugin-typescript";
 
-const corePluginsNode = ({
+/**
+ *
+ * @param tsOptions
+ * @param commonJsOptions
+ * @param nodeResolveOptions
+ * @param jsonOptions
+ * @return {{plugins: Plugin[]}}
+ */
+export const corePluginsNode = ({
   tsOptions,
   commonJsOptions,
   nodeResolveOptions,
   jsonOptions
-} = {}) => {
-  return {
-    plugins: [
-      json(jsonOptions),
-      nodeResolve(nodeResolveOptions),
-      commonJs(commonJsOptions),
-      ts({
-        ...tsOptions
-      })
-    ]
-  };
-};
-
-module.exports = {
-  corePluginsNode
-};
+} = {}) => ({
+  plugins: [
+    json(jsonOptions),
+    nodeResolve(nodeResolveOptions),
+    commonJs(commonJsOptions),
+    ts({
+      ...tsOptions
+    })
+  ]
+});

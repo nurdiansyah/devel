@@ -1,0 +1,11 @@
+{
+  "name": "@nurdiansyah/dev-project-esm",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@nurdiansyah/rollup": "workspace:^"
+  },
+  "scripts": {
+    "build": "cre8-bundle"
+  }
+}

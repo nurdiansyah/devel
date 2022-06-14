@@ -1,0 +1,10 @@
+{
+  "name": "@nurdiansyah/dev-project-cjs",
+  "private": true,
+  "devDependencies": {
+    "@nurdiansyah/rollup": "workspace:^"
+  },
+  "scripts": {
+    "build": "cre8-bundle"
+  }
+}
