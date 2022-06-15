@@ -63,7 +63,7 @@ const jsBundle = (
     output = {
       format: "esm",
       ...output,
-      ...(config.output && {})
+      ...(config.output || {})
     }
   }
   return {
