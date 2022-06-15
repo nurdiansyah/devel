@@ -52,7 +52,7 @@ const jsBundle = (
     output = [
       {
         ...output,
-        format: "esm"
+        format: "es"
       },
       {
         ...output,
@@ -61,7 +61,7 @@ const jsBundle = (
     ]
   } else {
     output = {
-      format: "esm",
+      format: "es",
       ...output,
       ...(config.output || {})
     }
