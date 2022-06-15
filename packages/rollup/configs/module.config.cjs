@@ -40,15 +40,15 @@ const jsBundle = (
     ...(pkg.optionalDependencies || {})
   };
   let baseOutput = {
-    paths: rewritePaths(),
     sourcemap: config.sourcemap,
-    sourcemapPathTransform: rewriteSourcePaths(config),
     sourcemapExcludeSources: config.sourcemapExcludeSources
   };
   if (typeof config.output === "string") {
     baseOutput.file = type === "module"
       ? config.output.replace(/\.js$/, ".js")
-      : config.output.replace(/\.js$/, ".mjs")
+      : config.output.replace(/\.js$/, ".mjs");
+    baseOutput.paths = rewritePaths();
+    baseOutput.sourcemapPathTransform =  rewriteSourcePaths(config)
   } else {
     baseOutput = {
       ...baseOutput,
