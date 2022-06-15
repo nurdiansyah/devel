@@ -47,6 +47,7 @@ export const jsBundle = (
           type === "module"
             ? config.output.replace(/\.js$/, ".js")
             : config.output.replace(/\.js$/, ".mjs"),
+
         format: "esm",
         paths: rewritePaths(),
         sourcemap: config.sourcemap,
@@ -115,4 +116,17 @@ function rewriteSourcePaths(config) {
   return (file) => path.join(config.sourceRoot || "", path.relative(outToIn, file));
 }
 
-export default jsBundle;
+/**
+ * @param config
+ * @param opts
+ */
+export default (config, opts = {}) => {
+  if (Array.isArray(config)) {
+    const result = [];
+    for (const configElement of config) {
+      result.push(jsBundle(configElement, opts));
+    }
+    return result;
+  }
+  return jsBundle(config, opts);
+};

@@ -10,12 +10,12 @@ const typescript = require("@rollup/plugin-typescript");
 const ts_plugin = ({ isPublish = false, include } = {}) =>
   isPublish
     ? typescript({
-        include,
-        typescript: require("typescript")
-      })
+      include,
+      typescript: require("typescript")
+    })
     : sucrase({
-        transforms: ["typescript"]
-      });
+      transforms: ["typescript"]
+    });
 
 const jsBundle = (
   config,
@@ -59,7 +59,7 @@ const jsBundle = (
             ? config.output.replace(/\.js$/, ".cjs")
             : config.output.replace(/\.js$/, ".js"),
         format: "cjs",
-        paths: rewritePaths({}),
+        paths: rewritePaths(),
         sourcemap: config.sourcemap,
         sourcemapPathTransform: rewriteSourcePaths(config),
         sourcemapExcludeSources: config.sourcemapExcludeSources
@@ -115,4 +115,20 @@ function rewriteSourcePaths(config) {
   return (file) => path.join(config.sourceRoot || "", path.relative(outToIn, file));
 }
 
-module.exports = jsBundle;
+/**
+ * @param config
+ * @param opts
+ */
+var module_config = (config, opts = {}) => {
+  if (Array.isArray(config)) {
+    const result = [];
+    for (const configElement of config) {
+      result.push(jsBundle(configElement, opts));
+    }
+    return result;
+  }
+  return jsBundle(config, opts);
+};
+
+export { module_config as default, jsBundle };
+
