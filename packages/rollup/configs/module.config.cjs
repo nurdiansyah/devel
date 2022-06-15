@@ -132,5 +132,6 @@ var module_config = (config, opts = {}) => {
   return jsBundle(config, opts);
 };
 
-export { module_config as default, jsBundle };
+module.exports = module_config;
+
 
