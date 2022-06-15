@@ -39,34 +39,36 @@ const jsBundle = (
     ...(pkg.peerDependencies || {}),
     ...(pkg.optionalDependencies || {})
   };
-  let baseOutput = {
+  let output = {
     sourcemap: config.sourcemap,
     sourcemapExcludeSources: config.sourcemapExcludeSources
   };
   if (typeof config.output === "string") {
-    baseOutput.file = type === "module"
+    output.file = type === "module"
       ? config.output.replace(/\.js$/, ".js")
       : config.output.replace(/\.js$/, ".mjs");
-    baseOutput.paths = rewritePaths();
-    baseOutput.sourcemapPathTransform =  rewriteSourcePaths(config)
+    output.paths = rewritePaths();
+    output.sourcemapPathTransform =  rewriteSourcePaths(config);
+    output = [
+      {
+        ...output,
+        format: "esm"
+      },
+      {
+        ...output,
+        format: "cjs"
+      }
+    ]
   } else {
-    baseOutput = {
-      ...baseOutput,
+    output = {
+      format: "esm",
+      ...output,
       ...(config.output && {})
     }
   }
   return {
     input: config.input,
-    output: [
-      {
-        ...baseOutput,
-        format: "esm"
-      },
-      {
-        ...baseOutput,
-        format: "cjs"
-      }
-    ],
+    output,
     external: [...externalDependencies, ...Object.keys(_externalDependencies)],
     plugins: [
       json(jsonOptions),
