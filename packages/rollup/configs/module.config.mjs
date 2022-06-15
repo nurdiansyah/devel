@@ -39,31 +39,32 @@ export const jsBundle = (
     ...(pkg.peerDependencies || {}),
     ...(pkg.optionalDependencies || {})
   };
+  let baseOutput = {
+    paths: rewritePaths(),
+    sourcemap: config.sourcemap,
+    sourcemapPathTransform: rewriteSourcePaths(config),
+    sourcemapExcludeSources: config.sourcemapExcludeSources
+  };
+  if (typeof config.output === "string") {
+    baseOutput.file = type === "module"
+      ? config.output.replace(/\.js$/, ".js")
+      : config.output.replace(/\.js$/, ".mjs")
+  } else {
+    baseOutput = {
+      ...baseOutput,
+      ...(config.output && {})
+    }
+  }
   return {
     input: config.input,
     output: [
       {
-        file:
-          type === "module"
-            ? config.output.replace(/\.js$/, ".js")
-            : config.output.replace(/\.js$/, ".mjs"),
-
-        format: "esm",
-        paths: rewritePaths(),
-        sourcemap: config.sourcemap,
-        sourcemapPathTransform: rewriteSourcePaths(config),
-        sourcemapExcludeSources: config.sourcemapExcludeSources
+        ...baseOutput,
+        format: "esm"
       },
       {
-        file:
-          type === "module"
-            ? config.output.replace(/\.js$/, ".cjs")
-            : config.output.replace(/\.js$/, ".js"),
-        format: "cjs",
-        paths: rewritePaths({}),
-        sourcemap: config.sourcemap,
-        sourcemapPathTransform: rewriteSourcePaths(config),
-        sourcemapExcludeSources: config.sourcemapExcludeSources
+        ...baseOutput,
+        format: "cjs"
       }
     ],
     external: [...externalDependencies, ...Object.keys(_externalDependencies)],
