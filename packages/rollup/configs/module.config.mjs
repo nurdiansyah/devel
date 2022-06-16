@@ -44,40 +44,30 @@ export const jsBundle = (
     sourcemapExcludeSources: config.sourcemapExcludeSources
   };
   if (typeof config.output === "string") {
-    output.file = type === "module"
-      ? config.output.replace(/\.js$/, ".js")
-      : config.output.replace(/\.js$/, ".mjs");
     output.paths = rewritePaths();
     output.sourcemapPathTransform =  rewriteSourcePaths(config);
     output = [
       {
         ...output,
-        format: "esm"
+        file: type === "module" ? config.output : config.output.replace(/\.js$/, ".mjs"),
+        format: "es"
       },
       {
         ...output,
+        file: type !== "module" ? config.output : config.output.replace(/\.js$/, ".cjs"),
         format: "cjs"
       }
     ]
   } else {
     output = {
-      format: "esm",
+      format: "es",
       ...output,
       ...(config.output || {})
     }
   }
   return {
     input: config.input,
-    output: [
-      {
-        ...baseOutput,
-        format: "esm"
-      },
-      {
-        ...baseOutput,
-        format: "cjs"
-      }
-    ],
+    output,
     external: [...externalDependencies, ...Object.keys(_externalDependencies)],
     plugins: [
       json(jsonOptions),

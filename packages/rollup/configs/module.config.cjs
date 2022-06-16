@@ -44,18 +44,17 @@ const jsBundle = (
     sourcemapExcludeSources: config.sourcemapExcludeSources
   };
   if (typeof config.output === "string") {
-    output.file = type === "module"
-      ? config.output.replace(/\.js$/, ".js")
-      : config.output.replace(/\.js$/, ".mjs");
     output.paths = rewritePaths();
     output.sourcemapPathTransform =  rewriteSourcePaths(config);
     output = [
       {
         ...output,
+        file: type === "module" ? config.output : config.output.replace(/\.js$/, ".mjs"),
         format: "es"
       },
       {
         ...output,
+        file: type !== "module" ? config.output : config.output.replace(/\.js$/, ".cjs"),
         format: "cjs"
       }
     ]
