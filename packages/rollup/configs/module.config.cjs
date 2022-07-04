@@ -35,6 +35,7 @@ const jsBundle = (
   } = {}
 ) => {
   const _externalDependencies = {
+    ...(pkg.dependencies || {}),
     ...(pkg.peerDependencies || {}),
     ...(pkg.optionalDependencies || {})
   };
