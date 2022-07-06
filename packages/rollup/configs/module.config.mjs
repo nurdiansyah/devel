@@ -24,7 +24,8 @@ export const jsBundle = (
      * klo isPublish true menggunakan typescript plugin dan klo false menggunaka sucrase
      */
     isPublish = false,
-    type = "commonjs",
+    type = "module",
+    cjsDisable = false,
     jsonOptions = {},
     nodeResolveOptions = {
       preferBuiltins: true
@@ -52,7 +53,7 @@ export const jsBundle = (
         file: type === "module" ? config.output : config.output.replace(/\.js$/, ".mjs"),
         format: "es"
       },
-      {
+      !cjsDisable && {
         ...output,
         file: type !== "module" ? config.output : config.output.replace(/\.js$/, ".cjs"),
         format: "cjs"
