@@ -1,6 +1,6 @@
 {
   "name": "@nurdiansyah/rollup",
-  "version": "1.10.1",
+  "version": "1.10.2",
   "description": "develop base rollup",
   "author": "Nurdiansyah",
   "repository": {
@@ -13,14 +13,8 @@
   },
   "type": "module",
   "exports": {
-    ".": {
-      "import": "./configs/module.config.js",
-      "require": "./configs/module.config.cjs"
-    },
-    "./configs/module.config": {
-      "import": "./configs/module.config.js",
-      "require": "./configs/module.config.cjs"
-    }
+    ".": "./configs/module.config.js",
+    "./configs/module.config": "./configs/module.config.js"
   },
   "scripts": {
     "release": "bump -c && pnpm publish"
