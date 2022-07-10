@@ -3,11 +3,12 @@ import fs from "fs-extra";
 import path from "path";
 import commonJs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
-import multiInput from "rollup-plugin-multi-input";
+import multiInputPlugin from "rollup-plugin-multi-input";
 import json from "@rollup/plugin-json";
 import sucrase from "@rollup/plugin-sucrase";
 import typescript from "@rollup/plugin-typescript";
 
+const multiInput = multiInputPlugin.default;
 const ts_plugin = ({ isPublish = false, include } = {}) =>
   isPublish
     ? typescript({
