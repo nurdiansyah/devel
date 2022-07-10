@@ -3,6 +3,7 @@ import fs from "fs-extra";
 import path from "path";
 import commonJs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
+import multiInput from "rollup-plugin-multi-input";
 import json from "@rollup/plugin-json";
 import sucrase from "@rollup/plugin-sucrase";
 import typescript from "@rollup/plugin-typescript";
@@ -32,6 +33,7 @@ export const jsBundle = (
     },
     externalDependencies = [],
     commonJsOptions = {},
+    multiOptions = {},
     tsInclude = ["src/**"]
   } = {}
 ) => {
@@ -46,7 +48,7 @@ export const jsBundle = (
   };
   if (typeof config.output === "string") {
     output.paths = rewritePaths();
-    output.sourcemapPathTransform =  rewriteSourcePaths(config);
+    output.sourcemapPathTransform = rewriteSourcePaths(config);
     output = [
       {
         ...output,
@@ -58,19 +60,20 @@ export const jsBundle = (
         file: type !== "module" ? config.output : config.output.replace(/\.js$/, ".cjs"),
         format: "cjs"
       }
-    ]
+    ];
   } else {
     output = {
       format: "es",
       ...output,
       ...(config.output || {})
-    }
+    };
   }
   return {
     input: config.input,
     output,
     external: [...externalDependencies, ...Object.keys(_externalDependencies)],
     plugins: [
+      multiInput(multiOptions),
       json(jsonOptions),
       nodeResolve(nodeResolveOptions),
       commonJs(commonJsOptions),
