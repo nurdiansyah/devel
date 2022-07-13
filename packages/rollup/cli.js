@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { rollup } from "rollup";
 import loadConfigFile from "rollup/dist/loadConfigFile";
 import path from "path";
