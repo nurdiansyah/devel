@@ -4,6 +4,7 @@ import path from "path";
 import commonJs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import multiInputPlugin from "rollup-plugin-multi-input";
+import cleanupPlugin from "rollup-plugin-cleanup";
 import json from "@rollup/plugin-json";
 import sucrase from "@rollup/plugin-sucrase";
 import typescript from "@rollup/plugin-typescript";
@@ -35,6 +36,7 @@ export const jsBundle = (
     externalDependencies = [],
     commonJsOptions = {},
     multiOptions = {},
+    cleanupOptions = {},
     tsInclude = ["src/**"]
   } = {}
 ) => {
@@ -78,7 +80,8 @@ export const jsBundle = (
       json(jsonOptions),
       nodeResolve(nodeResolveOptions),
       commonJs(commonJsOptions),
-      ts_plugin({ isPublish, include: tsInclude })
+      ts_plugin({ isPublish, include: tsInclude }),
+      cleanupPlugin(cleanupOptions)
     ]
   };
 };
