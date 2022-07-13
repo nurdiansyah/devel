@@ -36,7 +36,9 @@ export const jsBundle = (
     externalDependencies = [],
     commonJsOptions = {},
     multiOptions = {},
-    cleanupOptions = {},
+    cleanupOptions = {
+      extensions: ["ts", "js", "mjs"]
+    },
     tsInclude = ["src/**"]
   } = {}
 ) => {
