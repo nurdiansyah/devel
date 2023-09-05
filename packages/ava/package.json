@@ -1,0 +1,35 @@
+{
+  "name": "@nurdiansyah/ava",
+  "version": "1.0.0",
+  "description": "testing script ava",
+  "author": "Nurdiansyah",
+  "repository": {
+    "type": "git",
+    "url": "ssh://github.com/nurdiansyah/devel.git",
+    "directory": "packages/ava"
+  },
+  "type": "module",
+  "scripts": {
+    "bump": "pnpm build && bump",
+    "publish:dev": "pnpm publish --tag dev --no-git-checks",
+    "release": "pnpm bump -p -t \"api-v\" -c \"release api v\" && pnpm publish",
+    "release:dev": "pnpm bump prerelease && pnpm publish:dev"
+  },
+  "dependencies": {
+    "arrify": "^3.0.0",
+    "ci-parallel-vars": "^1.0.1",
+    "del": "^6.1.1",
+
+    "ava": "^4.3.0",
+    "esbuild-node-loader": "^0.8.0"
+  },
+  "devDependencies": {
+    "@nurdiansyah/bump": "^6.1.2",
+    "@nurdiansyah/rollup": "workspace:~",
+    "fs-extra": "^10.0.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
