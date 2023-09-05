@@ -1,6 +1,6 @@
 {
   "name": "@nurdiansyah/eslint-config-devel",
-  "version": "8.0.3",
+  "version": "8.0.4",
   "description": "config eslint standard",
   "author": "Nurdiansyah",
   "main": "index.js",
@@ -29,8 +29,8 @@
     "svelte": "^3.42.6"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "5.x || 6.x",
+    "@typescript-eslint/parser": "5.x || 6.x",
     "eslint": "^8.0.0",
     "prettier": "^2.0.0"
   },
